@@ -1,8 +1,7 @@
 \input logicdocument
-\title{Phil 210 - Week 6 Problem Set}
 
 \heading
-Week 6 Problem Set
+Week 6 Problem Set Solutions
 Your Name
 Introduction to Formal Logic
 \endheading
@@ -80,17 +79,17 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 	\fitchproofnegindent
 	 1. | A > B
 	 2. | C > D
-	 3. | E > C     ..  Goal: [A ^ E] > [B ^ D]
+	 3. | E > C      ..  Goal: [A ^ E] > [B ^ D]
 	    |---
-	 4. |  | A ^ E  ..  Assumption  .  Setting up: > Intro  .  Goal: B ^ D
-	    |  |---
-	 5. |  | 
-	 6. |  | 
-	 7. |  | 
-	 8. |  | 
-	 9. |  | 
-	 10.|  | B ^ D  .  
-	    |  ++++
+	 4. |   | A ^ E  ..  Assumption  .  Setting up: > Intro  .  Goal: B ^ D
+	    |   |---
+	 5. |   | 
+	 6. |   | 
+	 7. |   | 
+	 8. |   | 
+	 9. |   | 
+	 10.|   | B ^ D   .  
+	    |   +
 	 11.| [A ^ E] > [B ^ D]  .  > Intro: 5-10
 	\endfitchproof
 	\endanswer
@@ -105,17 +104,17 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 	\answer
 	\fitchproofnegindent
 	 1. | A > B
-	 2. | B > C     ..  Goal: [A ^ D] > [C ^ D]
+	 2. | B > C      ..  Goal: [A ^ D] > [C ^ D]
 	    |---
-	 3. |  |        ..  Assumption  .  Setting up: > Intro  .  Goal: 
-	    |  |---
-	 4. |  | 
-	 5. |  | 
-	 6. |  | 
-	 7. |  | 
-	 8. |  | 
-	    |  ++++
-	 9. |           .  > Intro: 3-8
+	 3. |   |        ..  Assumption  .  Setting up: > Intro  .  Goal: 
+	    |   |---
+	 4. |   | 
+	 5. |   | 
+	 6. |   | 
+	 7. |   | 
+	 8. |   | 
+	    |   +
+	 9. |            .  > Intro: 3-8
 	\endfitchproof
 	\endanswer
 
@@ -187,18 +186,18 @@ Note: This is only one of multiple options for line 5.
 	\answer
 	\fitchproof
 	 1. | A > [C ^ D]
-	 2. | D > [A ^ B]   ..  Goal: A < D
+	 2. | D > [A ^ B]  ..  Goal: A < D
 	    |---
-	 3. |  | A          ..  Assumption  .  Setting up: < Intro  .  Goal: D
-	    |  |---
-	    |  | 
-	    |  ++++
-	    |  +
-	 ?. |  | D          ..  Assumption  .  Setting up: < Intro  .  Goal: A
-	    |  |---
-	    |  | 
-	    |  ++++
-	    | A < D         .  < Intro: 3-, ?-
+	 3. |   | A        ..  Assumption  .  Setting up: < Intro  .  Goal: D
+	    |   |---
+	    |   | 
+	    |   +
+	    |   +
+	 ?. |   | D        ..  Assumption  .  Setting up: < Intro  .  Goal: A
+	    |   |---
+	    |   | 
+	    |   +
+	    | A < D        .  < Intro: 3-, ?-
 	\endfitchproof
 	\endanswer
 
@@ -209,13 +208,13 @@ Note: This is only one of multiple options for line 5.
 \endargument
 	\answer
 	\fitchproof
-	 1. |               ..  Goal: [A > B] > *[[A ^ -C] > B*]
+	 1. |                 ..  Goal: [A > B] > *[[A ^ -C] > B*]
 	    |---
-	 2. |  | A > B      ..  Setting up: > Intro  .  Goal: [A ^ -C] > B
-	    |  |---
-	 3. |  |  | A ^ -C  ..  Setting up: > Intro  .  Goal: B
-	    |  |  |---
-	 4. |  |  | 
+	 2. |   | A > B       ..  Setting up: > Intro  .  Goal: [A ^ -C] > B
+	    |   |---
+	 3. |   |   | A ^ -C  ..  Setting up: > Intro  .  Goal: B
+	    |   |   |---
+	 4. |   |   | 
 	\endfitchproof
 	\endanswer
 
@@ -226,11 +225,11 @@ Note: This is only one of multiple options for line 5.
 \endargument
 	\answer
 	\fitchproof
-	 1. |                 ..  Goal: *[[A ^ B] > C*] > *[A > [B > C]*]
+	 1. |                    ..  Goal: *[[A ^ B] > C*] > *[A > [B > C]*]
 	    |---
-	 2. |  | [A ^ B] > C  ..  Setting up: > Intro  .  Goal: A > [B > C]
-	    |  |---
-	 3. |  | 
+	 2. |   | [A ^ B] > C    ..  Setting up: > Intro  .  Goal: A > [B > C]
+	    |   |---
+	 3. |   | 
 	\endfitchproof
 	\endanswer
 

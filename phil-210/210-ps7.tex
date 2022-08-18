@@ -1,8 +1,7 @@
 \input logicdocument
-\title{Phil 210 - Week 7 Problem Set}
 
 \heading
-Week 7 Problem Set
+Week 7 Problem Set Solutions
 Your Name
 Introduction to Formal Logic
 \endheading
@@ -54,11 +53,11 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 	\answer
 	\fitchproof
 	 1. | A > B
-	 2. | B > C         ..  Goal: A > [C v D]
+	 2. | B > C        ..  Goal: A > [C v D]
 	    |---
-	 3. |  | A          ..  Assumption  .  Setting up: > Intro  .  Goal: C v D
-	    |  |---
-	 4. |  | 
+	 3. |   | A        ..  Assumption  .  Setting up: > Intro  .  Goal: C v D
+	    |   |---
+	 4. |   | 
 	\endfitchproof
 	\endanswer
 
@@ -90,16 +89,16 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 	 2. | B > C
 	 3. | [D ^ A] v [E ^ B]  ..  Goal: C
 	    |---
-	 4. |  | D ^ A  ..  Assumption  .  Setting up: v Elim: 3  .  Goal: C
-	    |  |---
-	    |  | 
-	    |  ++++
-	    |  +
-	 ?. |  | E ^ B  ..  Assumption  .  Setting up: v Elim: 3  .  Goal: C
-	    |  |---
-	    |  | 
-	    |  ++++
-	    | C         .  v Elim: 3, 4-, ?-
+	 4. |   | D ^ A  ..  Assumption  .  Setting up: v Elim: 3  .  Goal: C
+	    |   |---
+	    |   | 
+	    |   +
+	    |   +
+	 ?. |   | E ^ B  ..  Assumption  .  Setting up: v Elim: 3  .  Goal: C
+	    |   |---
+	    |   | 
+	    |   +
+	    | C          .  v Elim: 3, 4-, ?-
 	\endfitchproof
 	\endanswer
 
@@ -113,11 +112,11 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 	\answer
 	\fitchproof
 	 1. | A > C
-	 2. | B > D        ..  Goal: [A v B] > [C v D]
+	 2. | B > D          ..  Goal: [A v B] > [C v D]
 	    |---
-	 3. |  | A v B     ..  Setting up: > Intro    .  Goal: C v D
-	    |  |---
-	 4. |  | 
+	 3. |   | A v B      ..  Setting up: > Intro    .  Goal: C v D
+	    |   |---
+	 4. |   | 
 	\endfitchproof
 	\endanswer
 

@@ -1,8 +1,7 @@
 \input logicdocument
-\title{Phil 210 - Week 8 Problem Set}
 
 \heading
-Week 8 Problem Set
+Week 8 Problem Set Solutions
 Your Name
 Introduction to Formal Logic
 \endheading
@@ -20,14 +19,14 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 	\answer
 	\fitchproof
 	 1. | A
-	 2. | -[A ^ B]  ..  Goal: -B
+	 2. | -[A ^ B]   ..  Goal: -B
 	    |---
-	 3. |  | B      ..  Assumption  .  Setting up: - Intro  .  Goal: !
-	    |  |---
-	 4. |  |        .  ^ Intro: 1, 3
-	 5. |  | !      .  ! Intro: 2, 4
-	    |  ++++
-	 6. |           .  - Intro: 3-5
+	 3. |   | B      ..  Assumption  .  Setting up: - Intro  .  Goal: !
+	    |   |---
+	 4. |   |        .  ^ Intro: 1, 3
+	 5. |   | !      .  ! Intro: 2, 4
+	    |   +
+	 6. |            .  - Intro: 3-5
 	\endfitchproof
 	\endanswer
 
@@ -43,11 +42,11 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 	\fitchproof
 	 1. | A > B
 	 2. | B > C
-	 3. | -C     ..  Goal: -A
+	 3. | -C      ..  Goal: -A
 	    |---
-	 4. |  | A   ..  Assumption  .  Setting up: - Intro  .  Goal: !
-	    |  |---
-	 5. |  | 
+	 4. |   | A   ..  Assumption  .  Setting up: - Intro  .  Goal: !
+	    |   |---
+	 5. |   | 
 	\endfitchproof
 	\endanswer
 
@@ -64,11 +63,11 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 	 1. | -A > -B
 	 2. | B        ..  Goal: A
 	    |---
-	 3. |  | -A    ..  Assumption  .  Setting up: - Intro  .  Goal: !
-	    |  |---
-	 4. |  |       .  
-	 5. |  |       .  
-	    |  ++++
+	 3. |   | -A   ..  Assumption  .  Setting up: - Intro  .  Goal: !
+	    |   |---
+	 4. |   |      .  
+	 5. |   |      .  
+	    |   +
 	 6. | --A      .  - Intro: 3-5
 	 7. | A        .  - Elim: 6
 	\endfitchproof
@@ -84,11 +83,11 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 	\answer
 	\fitchproof
 	 1. | [A ^ B] > C
-	 2. | -C           .. Goal: A > -B
+	 2. | -C            .. Goal: A > -B
 	    |---
-	 3. |  | A         ..  Assumption  .  Setting up: > Intro  .  Goal: -B
-	    |  |---
-	 4. |  | 
+	 3. |   | A         ..  Assumption  .  Setting up: > Intro  .  Goal: -B
+	    |   |---
+	 4. |   | 
 	\endfitchproof
 	\endanswer
 
@@ -104,19 +103,19 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 	\answer
 	\fitchproof
 	 1. | A v B
-	 2. | -B     ..  Goal: A
+	 2. | -B      ..  Goal: A
 	    |---
-	 3. |  | A   ..  Assumption  .  Setting up: v Elim: 1  .  Goal: A
-	    |  |---
-	    |  | 
-	    |  ++++
-	    |  +
-	 ?. |  | B   ..  Assumption  .  Setting up: v Elim: 1  .  Goal: A
-	    |  |---
-	    |  | 
-	    |  | 
-	    |  ++++
-	    | A      .  v Elim: 1, 3-, ?-
+	 3. |   | A   ..  Assumption  .  Setting up: v Elim: 1  .  Goal: A
+	    |   |---
+	    |   | 
+	    |   +
+	    |   +
+	 ?. |   | B   ..  Assumption  .  Setting up: v Elim: 1  .  Goal: A
+	    |   |---
+	    |   | 
+	    |   | 
+	    |   +
+	    | A       .  v Elim: 1, 3-, ?-
 	\endfitchproof
 	\endanswer
 
