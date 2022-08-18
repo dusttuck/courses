@@ -1,5 +1,5 @@
 \input logicdocument
-\title{Phil 210 - Getting Started with Overleaf}
+\title{Phil 210 - Getting Started with Overleaf} % This only matters for Overleaf.
 
 \heading
 Getting Started with Overleaf
@@ -7,96 +7,42 @@ Your Name
 Introduction to Formal Logic
 \endheading
 
-First, in the left-hand panel, replace @Your Name@ with your actual name.
-
-Whenever you make changes in the left-hand panel, you have to press the green Recompile button before they show up in the pdf on the right, so do that now.
-
-In \TeX, a backslash like @\@ indicates a 
-
 \problems
-\problem{Example}
-Ruth and Alonzo are logicians.
-	\answer
-	$ Logician(ruth) ^ Logician(alonzo) $\OR$L(r)^L(a)$
-	\endanswer
-
 \problem{1}
-Ruth is happy.
-	\answer
-	$ $
-	\endanswer
+In the left-hand panel, replace @Your Name@ with your actual name.
 
 \problem{2}
-Ruth saw Alonzo.
-	\answer
-	$ $
-	\endanswer
+Changes made on the left won't appear in the pdf on the right until you click the green Recompile button, so do that now.
 
 \problem{3}
-Ruth and Alonzo are both happy.
+Put the text ``Logician(ruth) v Logician(alonzo)'' (without the quotation marks) between the dollar signs in the answer to this problem.
 	\answer
-	$ $
+	$ put the text here $
 	\endanswer
 
 \problem{4}
-Ruth or Alonzo is happy.
-	\answer
-	$ $
-	\endanswer
-
-\problem{5}
-Both Ruth and Alonzo saw Kurt.
-	\answer
-	$ $
-	\endanswer
-
-\problem{6}
-Ruth isn't happy.
-	\answer
-	$ $
-	\endanswer
-
-\problem{7}
-Ruth is either happy or she's a logician.
-	\answer
-	$ $
-	\endanswer
-
-\problem{8}
-Ruth is either happy or she's a logician, but she's not both.
-	\answer
-	$ $
-	\endanswer
-
-\problem{9}
-Ruth is neither happy nor a logician.
-	\answer
-	$ $
-	\endanswer
-
-\problem{10}
-Either Ruth didn't see Alonzo or she didn't see Kurt.
-	\answer
-	$ $
-	\endanswer
-
-\problem{11}
-Ruth can't see herself.
-	\answer
-	$ $
-	\endanswer
-
-\problem{12}
-Ruth and Alonzo didn't see each other, but they did see themselves.
-	\answer
-	$ $
-	\endanswer
-
-\problem{13}
-Either Ruth and Alonzo are both taller than Kurt, or Kurt was sitting; in any event, neither of them saw Kurt.
-	\answer
-	$ $
-	\endanswer
+That's all you have to do for this problem set! Make sure you Recompile again, then download the pdf using the button to the right of Recompile, and submit that pdf on Canvas.
 
 \endproblems
+
+
+Here's some additional info about \TeX, if you're interested:
+
+\parskip\baselineskip \parindent\problemindent
+
+\TeX\ is really just a programming language for producing documents. A backslash (@\@) indicates that the word following it is a command, which tells \TeX\ to do something special, instead of just typesetting it. A percent sign (@%@) indicates a comment, which means that \TeX\ ignores everything following it until it gets to a new line. In this class, you'll never have to type commands or comments yourself, but that's what they are.
+
+Most of the commands we'll use in this class, like @\heading@ and @\endanswer@, are custom definitions, as is using the \at\ symbol to allow talking about commands instead of using them, so don't expect those to work the same elsewhere. (A few, like @\input@ and @\TeX@, are native to \TeX.)
+
+Dollar signs tell \TeX\ to go into ``math mode,'' which changes the font and spacing rules, as well as certain symbols.
+
+In this class, several symbols (@ ^ v - > < ! @) have special meanings ($ ^ v - > < ! $) inside math mode, which you also shouldn't expect to work elsewhere.
+
+Spaces and line breaks are mostly optional in \TeX. So, for instance,
+even though
+I'm adding   lots   of unnecessary spaces  and line
+breaks
+here, this paragraph   will come out  fine. You have    to use a blank line for \TeX\ to start a new paragraph.
+
+There are certain places in this class where line breaks matter, but hopefully, they'll all be natural enough that you won't even notice.
 \bye
