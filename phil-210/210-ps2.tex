@@ -24,20 +24,21 @@ I've begun each of the following truth tables. Complete them by filling in the m
 \truthtable
  L(a) | L(r) :  -.[.L(a). v .L(r).]
 \truthtableline
-  T   |  T   : * . . t  . T . t
-  T   |  F   : * . . t  . T . f
-  F   |  T   : * . . f  . T . t
-  F   |  F   : * . . f  . F . f
+  T   |  T   : * .[. t  . T . t  .]
+  T   |  F   : * .[. t  . T . f  .]
+  F   |  T   : * .[. f  . T . t  .]
+  F   |  F   : * .[. f  . F . f  .]
 \endtruthtable
+\Hint Brackets are ignored after the first row.
 
 \problem{3}
 \truthtable
  A | B : [.A. ^ .B.].  v  .-.B
 \truthtableline
- T | T :  .t. T .t. . *   . .t
- T | F :  .t. F .f. . *   . .f
- F | T :  .f. F .t. . *   . .t
- F | F :  .f. F .f. . *   . .f
+ T | T : [.t. T .t.]. *   . .t
+ T | F : [.t. F .f.]. *   . .f
+ F | T : [.f. F .t.]. *   . .t
+ F | F : [.f. F .f.]. *   . .f
 \endtruthtable
 
 \problem{4}
@@ -53,6 +54,7 @@ I've begun each of the following truth tables. Complete them by filling in the m
  F | F | T : f. *   . . .f.   .t
  F | F | F : f. *   . . .f.   .f
 \endtruthtable
+\Hint So they're optional but not necessary.
 
 \endproblems
 \pagebreak
@@ -66,10 +68,10 @@ $ A ^ -[A v B] $
 	\truthtable
 	 A | B : A.  ^  .-.[.A. v .B.]
 	\truthtableline
-	 T | T : t. *F  .F. .t. T .t
-	 T | F : t. *F  .F. .t. T .f
-	 F | T : f. *F  .F. .f. T .t
-	 F | F : f. *F  .T. .f. F .f
+	 T | T : t. *F  .F.[.t. T .t.]
+	 T | F : t. *F  .F.[.t. T .f.]
+	 F | T : f. *F  .F.[.f. T .t.]
+	 F | F : f. *F  .T.[.f. F .f.]
 	\endtruthtable
 	Contradiction.
 	\endanswer
@@ -80,10 +82,10 @@ $ [A ^ B] v [A ^ -B] $
 	\truthtable
 	 A | B : [.A. ^ .B.].  v  .[.A. ^ . - .B.]
 	\truthtableline
-	 T | T :  . .   . . . *   . . .   .   . 
-	 T | F :  . .   . . . *   . . .   .   . 
-	 F | T :  . .   . . . *   . . .   .   . 
-	 F | F :  . .   . . . *   . . .   .   . 
+	 T | T : [. .   . .]. *   .[. .   .   . .]
+	 T | F : [. .   . .]. *   .[. .   .   . .]
+	 F | T : [. .   . .]. *   .[. .   .   . .]
+	 F | F : [. .   . .]. *   .[. .   .   . .]
 	\endtruthtable
 	Tautology/Contradiction/Neither?
 	\endanswer
@@ -94,14 +96,14 @@ $ -*[A v [B ^ C]*] v [A v B] $
 	\truthtable
 	 A | B | C : -.*[.A. v .[.B. ^ .C.]*].  v  .[.A. v .B.]
 	\truthtableline
-	 T | T | T :  .  . .   . . .   . .   . *   . . .   . 
-	 T | T | F :  .  . .   . . .   . .   . *   . . .   . 
-	 T | F | T :  .  . .   . . .   . .   . *   . . .   . 
-	 T | F | F :  .  . .   . . .   . .   . *   . . .   . 
-	 F | T | T :  .  . .   . . .   . .   . *   . . .   . 
-	 F | T | F :  .  . .   . . .   . .   . *   . . .   . 
-	 F | F | T :  .  . .   . . .   . .   . *   . . .   . 
-	 F | F | F :  .  . .   . . .   . .   . *   . . .   . 
+	 T | T | T :  . [. .   .[. .   . .] ]. *   .[. .   . .]
+	 T | T | F :  . [. .   .[. .   . .] ]. *   .[. .   . .]
+	 T | F | T :  . [. .   .[. .   . .] ]. *   .[. .   . .]
+	 T | F | F :  . [. .   .[. .   . .] ]. *   .[. .   . .]
+	 F | T | T :  . [. .   .[. .   . .] ]. *   .[. .   . .]
+	 F | T | F :  . [. .   .[. .   . .] ]. *   .[. .   . .]
+	 F | F | T :  . [. .   .[. .   . .] ]. *   .[. .   . .]
+	 F | F | F :  . [. .   .[. .   . .] ]. *   .[. .   . .]
 	\endtruthtable
 	Tautology/Contradiction/Neither?
 	\endanswer
@@ -112,14 +114,14 @@ $ -*[[-A v -C] v [B v C]*] $
 	\truthtable
 	 A | B | C :  -.*[[.-.A. v .-.C.]. v .[.B. v .C.]*]
 	\truthtableline
-	   |   |   : * .   . . .   . . . .   . . .   . 
-	   |   |   : * .   . . .   . . . .   . . .   . 
-	   |   |   : * .   . . .   . . . .   . . .   . 
-	   |   |   : * .   . . .   . . . .   . . .   . 
-	   |   |   : * .   . . .   . . . .   . . .   . 
-	   |   |   : * .   . . .   . . . .   . . .   . 
-	   |   |   : * .   . . .   . . . .   . . .   . 
-	   |   |   : * .   . . .   . . . .   . . .   . 
+	   |   |   : * . [[. . .   . . .].   .[. .   . .] ]
+	   |   |   : * . [[. . .   . . .].   .[. .   . .] ]
+	   |   |   : * . [[. . .   . . .].   .[. .   . .] ]
+	   |   |   : * . [[. . .   . . .].   .[. .   . .] ]
+	   |   |   : * . [[. . .   . . .].   .[. .   . .] ]
+	   |   |   : * . [[. . .   . . .].   .[. .   . .] ]
+	   |   |   : * . [[. . .   . . .].   .[. .   . .] ]
+	   |   |   : * . [[. . .   . . .].   .[. .   . .] ]
 	\endtruthtable
 	Tautology/Contradiction/Neither?
 	\endanswer
@@ -139,10 +141,10 @@ c. $ -[-A ^ B] $
 	\truthtable
 	 A | B : A. v .-.B | -.[.A. ^ .-.B.] | -.[.-.A. ^ .B.]
 	\truthtableline
-	 T | T : t.*T .T.t |*T. .t. F .F.t.  |*T. .F.t. F .t
-	 T | F : t.*T .T.f |*F. .t. T .T.f.  |*T. .F.t. F .f
-	 F | T : f.*F .F.t |*T. .f. F .F.t.  |*F. .T.f. T .t
-	 F | F : f.*T .T.f |*T. .f. F .T.f.  |*T. .T.f. F .f
+	 T | T : t.*T .T.t |*T.[.t. F .F.t.] |*T.[.F.t. F .t.]
+	 T | F : t.*T .T.f |*F.[.t. T .T.f.] |*T.[.F.t. F .f.]
+	 F | T : f.*F .F.t |*T.[.f. F .F.t.] |*F.[.T.f. T .t.]
+	 F | F : f.*T .T.f |*T.[.f. F .T.f.] |*T.[.T.f. F .f.]
 	\endtruthtable
 	a = c
 	\endanswer
@@ -158,7 +160,7 @@ d. $ -A v -[B ^ A] $
 	\truthtable
 	 A | B : -.[.A. v .B.] | -.[.A. ^ .B.] | -.A. ^ .-.B | -.A. v .-.[.B. ^ .A.]
 	\truthtableline
-	   |   :  . . .   . .  |  . . .   . .  |  . .   . .  |  . .   . . . .   . 
+	   |   :* .[. .   . .] |* .[. .   . .] |  . .*  . .  |  . .*  . .[. .   . .]
 	\endtruthtable
 	Equivalences?
 	\endanswer
@@ -173,7 +175,7 @@ c. $ [A v B] ^ [A v C] $
 	\truthtable
 	 A | B | C : A. v .[.B. ^ .C.] | A. ^ .[.B. v .C.] | [.A. v .B.]. ^ .[.A. v .C.]
 	\truthtableline
-	   |   |   :  .   . . .   . .  |  .   . . .   . .  |  . .   . . .   . . .   . 
+	   |   |   :  .   .[. .   . .] |  .   .[. .   . .] | [. .   . .].   .[. .   . .]
 	\endtruthtable
 	Equivalences?
 	\endanswer
