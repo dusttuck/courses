@@ -21,14 +21,14 @@ Construct truth tables for the following arguments. For each one, state whether 
 	\truthtable
 	 A | B | C : A. ^ .-.B | C. v .A | -.[.C. v .B.]
 	\truthtableline
-	 T | T | T : t.*F .F.t | t.*T .t |*F. .t. T .t
-	 T | T | F : t.*F .F.t | f.*T .t |*F. .f. T .t
-	 T | F | T : t.*T .T.f | t.*T .t |*F. .t. T .f
-	 T | F | F : t.*T .T.f | f.*T .t |*T. .f. F .f
-	 F | T | T : f.*F .F.t | t.*T .f |*F. .t. T .t
-	 F | T | F : f.*F .F.t | f.*F .f |*F. .f. T .t
-	 F | F | T : f.*F .T.f | t.*T .f |*F. .t. T .f
-	 F | F | F : f.*F .T.f | f.*F .f |*T. .f. F .f
+	 T | T | T : t.*F .F.t | t.*T .t |*F.[.t. T .t.]
+	 T | T | F : t.*F .F.t | f.*T .t |*F.[.f. T .t.]
+	 T | F | T : t.*T .T.f | t.*T .t |*F.[.t. T .f.]
+	 T | F | F : t.*T .T.f | f.*T .t |*T.[.f. F .f.]
+	 F | T | T : f.*F .F.t | t.*T .f |*F.[.t. T .t.]
+	 F | T | F : f.*F .F.t | f.*F .f |*F.[.f. T .t.]
+	 F | F | T : f.*F .T.f | t.*T .f |*F.[.t. T .f.]
+	 F | F | F : f.*F .T.f | f.*F .f |*T.[.f. F .f.]
 	\endtruthtable
 
 	Invalid. (You don't need to say why, but it's because row 3 is T T F.)
@@ -45,7 +45,7 @@ Construct truth tables for the following arguments. For each one, state whether 
 	\truthtable
 	 A | B : -.A | -.[.B. ^ .A.] | -.B
 	\truthtableline
-	   |   :  .  |  . . .   . .  |  . 
+	   |   :  .  |  .[. .   . .] |  . 
 	\endtruthtable
 	Valid/Invalid?
 	\endanswer
@@ -78,7 +78,7 @@ Construct truth tables for the following arguments. For each one, state whether 
 	\truthtable
 	 A | B : -.*[[.A. ^ .B.]. v .-.A.*] | [.-.B. v .A.]. ^ .B | A. v .-.[.B. v .A.]
 	\truthtableline
-	   |   :  .   . .   . . .   . . .   |  . . .   . . .   .  |  .   . . . .   . 
+	   |   :  . [[. .   . .].   . . . ] | [. . .   . .].   .  |  .   . .[. .   . .]
 	\endtruthtable
 	Valid/Invalid?
 	\endanswer
