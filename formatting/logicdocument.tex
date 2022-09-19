@@ -132,23 +132,23 @@
 
 \begingroup
 \catcode`\;=4
-\catcode`\.=\active
+\catcode`\:=\active
 \gdef\list{\the\everylist\vtop\bgroup%
 	\setbox0\hbox{\the\longestlistlabel\hskip\listlabelspace}
 	\listleftskip=\listindent
 	\advance\listleftskip by\wd0
 	\catcode`\;=4
-	\edef\resetperiod{\catcode`\noexpand\.=\the\catcode`\.\relax}
-	\def\makeperiodprintperiod{%
-		\catcode`\.=\active%
-		\def.{\char"2E;\relax}%
+	\edef\resetcolon{\catcode`\noexpand\:=\the\catcode`\:\relax}
+	\def\makecolonprintperiod{%
+		\catcode`\:=\active%
+		\def:{\char"2E;\relax}%
 	}
-	\catcode`\.=4
+	\catcode`\:=4
 	\def\par{\crcr}
 	\iflistobeylines\obeylines\else\catcode`\^^M=5\fi%
 	\halign\bgroup%
-	 	\makeperiodprintperiod\hfil\hskip\listindent##\hskip\listlabelspace;%
-		\resetperiod\vtop{%
+	 	\makecolonprintperiod\hfil\hskip\listindent##\hskip\listlabelspace;%
+		\resetcolon\vtop{%
 			\advance\hsize by-\leftskip%
 			\leftskip=0pt%
 			\advance\hsize by-\listleftskip%
