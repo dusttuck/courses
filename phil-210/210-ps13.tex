@@ -1,0 +1,117 @@
+\input logicdocument
+\title{Phil 210 - Week 13 Problem Set}
+
+\heading
+Week 13 Problem Set Solutions
+Your Name
+Introduction to Formal Logic
+\endheading
+
+For each of the following valid arguments, complete a Fitch-style natural deduction to prove its validity. Do this by filling in the missing lines, citations, or both.
+
+\quantifiers
+\problems
+\problem{1}
+\argument
+ Ax[Logician(x) > Happy(x)]
+ Logician(ruth) 
+\argumentline
+ Happy(ruth) 
+\endargument
+	\answer
+	\fitchproof
+	 1. | Ax[L(x) > H(x)]
+	 2. | L(r)             ..  Goal: H(r)
+	    |---
+	 3. | L( ) > H( )      .  A Elim: 1
+	\endfitchproof
+	\endanswer
+
+\problem{2}
+\argument
+ Ax[Logician(x) > Happy(x)]
+ -Happy(ruth) 
+\argumentline
+ -Logician(ruth) 
+\endargument
+\Hint Begin by setting up $-$ Intro.
+	\answer
+	\fitchproof
+	 1. | Ax[L(x) > H(x)]
+	 2. | -H(r)             ..  Goal: -L(r)
+	    |---
+	 3. | 
+	\endfitchproof
+	\endanswer
+
+\problem{3}
+\argument
+ Ax[Logician(x) > Happy(x)]
+ Logician(ruth)
+ Ex Happy(x) > Happy(alonzo)
+\argumentline
+ Happy(alonzo) 
+\endargument
+\Hint Premise 3 is a $>$ sentence, so don't use $E$ Elim.
+	\answer
+	\fitchproof
+	 1. | Ax[L(x) > H(x)]
+	 2. | L(r)
+	 3. | ExH(x) > H(a)    ..  Goal: H(a)
+	    |---
+	 4. |
+	\endfitchproof
+	\endanswer
+
+\problem{4}
+\argument
+ Ax[Logician(x) > Happy(x)]
+ Logician(ruth) v Logician(alonzo)
+\argumentline
+ Ex Happy(x)
+\endargument
+\Hint You can do $A$ Elim multiple times.
+	\answer
+	\fitchproof
+	 1. | Ax[L(x) > H(x)]
+	 2. | L(r) v L(a)      ..  Goal: ExH(x)
+	    |---
+	 3. | 
+	\endfitchproof
+	\endanswer
+
+\problem{5}
+\argument
+ Ax[Logician(x) > Happy(x)]
+ Ex Logician(x)
+\argumentline
+ Ex Happy(x)
+\endargument
+\Hint This is the first time you have to use $E$ Elim.
+	\answer
+	\fitchproof
+	 1. | Ax[L(x) > H(x)]
+	 2. | ExL(x)           ..  Goal: ExH(x)
+	    |---
+	 3. | 
+	\endfitchproof
+	\endanswer
+
+\problem{6}
+\argument
+ Ex-Happy(x)
+ Ax[Happy(x) v Sad(x)]
+\argumentline
+ Ex Sad(x)
+\endargument
+	\answer
+	\fitchproof
+	 1. | Ex-H(x)
+	 2. | Ax[H(x) v S(x)]  ..  Goal: ExS(x)
+	    |---
+	 3. | 
+	\endfitchproof
+	\endanswer
+
+\endproblems
+\bye
