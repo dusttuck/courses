@@ -1,0 +1,142 @@
+\input logicdocument
+\title{Phil 210 - Week 14 Problem Set}
+
+\heading
+Week 14 Problem Set
+Your Name
+Introduction to Formal Logic
+\endheading
+
+For each of the following valid arguments, complete a Fitch-style natural deduction to prove its validity.
+
+\quantifiers
+\problems
+\problem{1}
+\argument
+ ExEy Saw(x,y)
+ AxAy[Saw(x,y) > -Happy(y)]
+\argumentline
+ Ex -Happy(x)
+\endargument
+	\answer
+	\fitchproof
+	 1. | ExEy S(x,y)
+	 2. | AxAy[S(x,y) > -H(y)]  ..  Goal: Ex-H(x)
+	    |---
+	 3. |   | :a: Ey S(x,y)     ..  Setting up: E Elim: 1  .  Goal: Ex-H(x)
+	    |   |---
+	 4. |   |
+	\endfitchproof
+	\endanswer
+
+\problem{2}
+\argument
+ Ax -Dog(x)
+\argumentline
+ -Ex Dog(x)
+\endargument
+\Hint Begin by setting up $-$ Intro.
+	\answer
+	\fitchproof
+	 1. | Ax-D(x)  ..  Goal: -ExD(x)
+	    |---
+	 2. | 
+	\endfitchproof
+	\endanswer
+
+\problem{3}
+\argument
+ Ax[Happy(x) > Dog(x)
+ Ax Happy(x)
+\argumentline
+ Ax Dog(x)
+\endargument
+\Hint This is the first time you have to use $A$ Intro.
+	\answer
+	\fitchproof
+	 1. | Ax[H(x) > D(x)]
+	 2. | AxH(x)          ..  Goal: AxD(x)
+	    |---
+	 3. |   | :a:          ..  Setting up: A Intro  .  Goal: D(a)
+	    |   |---
+	 4. |   |
+	\endfitchproof
+	\endanswer
+
+\problem{4}
+\argument
+ Ax[Dog(x) > Happy(x)]
+ Ax[Happy(x) > -Tired(x)]
+\argumentline
+ Ax[Dog(x) > -Tired(x)]
+\endargument
+	\answer
+	\fitchproof
+	 1. | Ax[D(x) > H(x)]
+	 2. | Ax[H(x) > -T(x)]  ..  Goal: Ax[D(x) > -T(x)]
+	    |---
+	 3. | 
+	\endfitchproof
+	\endanswer
+
+\problem{5}
+\argument
+ AxAy*[[Dog(x) ^ Cat(y)] > Saw(x,y)*]
+\argumentline
+ Ax*[Cat(x) > Ay[Dog(y) > Saw(y,x)]*]
+\endargument
+	\answer
+	\fitchproof
+	 1. | AxAy*[[D(x) ^ C(y)] > S(x,y)*]  ..  Goal: Ax*[C(x) > Ay[D(y) > S(y,x)]*]
+	    |---
+	 2. | 
+	\endfitchproof
+	\endanswer
+
+\problem{6}
+\argument
+ Ax Happy(x)
+\argumentline
+ Ex Happy(x)
+\endargument
+\Hint You don't need a name in a box for $A$ Elim.
+	\answer
+	\fitchproof
+	 1. | AxH(x)  ..  Goal: ExH(x)
+	    |---
+	 2. | 
+	\endfitchproof
+	\endanswer
+
+\problem{7}
+\argument
+ AxAy Saw(x,y)
+\argumentline
+ AxEy Saw(x,y)
+\endargument
+	\answer
+	\fitchproof
+	 1. | AxAy S(x,y)  ..  Goal: AxEy S(x,y)
+	    |---
+	 2. |
+	\endfitchproof
+	\endanswer
+
+\problem{8}
+\argument
+ Ax[Logician(x) > Happy(x)]
+ -Ax Happy(x)
+\argumentline
+ -Ax Logician(x)
+\endargument
+	\answer
+	\fitchproof
+	 1. | Ax[L(x) > H(x)]
+	 2. | -AxH(x)         ..  Goal: -AxL(x)
+	    |---
+	 3. |
+	\endfitchproof
+	\endanswer
+
+\endproblems
+\bye
