@@ -1,0 +1,241 @@
+\input logicdocument
+\title{Phil 210 - Practice Final Exam}
+
+\heading
+Practice Final Exam
+Your Name
+Introduction to Formal Logic
+\endheading
+
+(40 points.) Translate the following English sentences into the language of first-order logic. (To shake things up a little bit, these sentences are about me, my wife, and my sisters-in-law instead of the usual collection of logicians.)
+
+\quantifiers
+\problems
+\problem{1} (9 points.)
+Dustin loves and is married to Gia.
+	\answer
+	$ $
+	\endanswer
+
+\problem{2} (8 points.)
+Nicole is married to neither Dustin nor Gia.
+	\answer
+	$ $
+	\endanswer
+
+\problem{3} (7 points.)
+Angela is married to Nicole, and she's happy if she sees her.
+	\answer
+	$ $
+	\endanswer
+
+\problem{4} (5 points.)
+Every dog is happy.
+	\answer
+	$ $
+	\endanswer
+
+\problem{5} (4 points.)
+No happy dogs are barking.
+	\answer
+	$ $
+	\endanswer
+
+\problem{6} (3 points.)
+Gia loves two cats.
+	\answer
+	$ $
+	\endanswer
+
+\problem{7} (3 points.)
+Every dog saw a cat.
+	\answer
+	$ $
+	\endanswer
+
+\endproblems
+
+(10 points.) Use a full or abbreviated truth table (your choice) to determine whether the following argument is valid or invalid and state your answer.
+
+\problems
+\problem{8}
+\argument
+ *[[B ^ C] > D*]
+ -[D v C]
+\argumentline
+ -B
+\endargument
+	\answer
+	\truthtable
+	 B | C | D : *[[.B. ^ .C.]. > .D.*] | -.[.D. v .C.] | -.B
+	\truthtableline
+	 T | T | T :  [[.t. T .t.].*T .t. ] |*F.[.t. T .t.] |*F.t
+	 T | T | F :  [[.t. T .t.].*F .f. ] |*F.[.f. T .t.] |*F.t
+	 T | F | T :  [[.t. F .f.].*T .t. ] |*F.[.t. T .f.] |*F.t
+	 T | F | F :  [[.t. F .f.].*T .f. ] |*T.[.f. F .f.] |*F.t
+	 F | T | T :  [[.f. F .t.].*T .t. ] |*F.[.t. T .t.] |*T.f
+	 F | T | F :  [[.f. F .t.].*T .f. ] |*F.[.f. T .t.] |*T.f
+	 F | F | T :  [[.f. F .f.].*T .t. ] |*F.[.t. T .f.] |*T.f
+	 F | F | F :  [[.f. F .f.].*T .f. ] |*T.[.f. F .f.] |*T.f
+	\endtruthtable
+	\truthtable
+	 B | C | D : *[[.B. ^ .C.]. > .D.*] | -.[.D. v .C.] | -.B
+	\truthtableline
+	   |   |   :  [[. .   . .]. T . . ] | T.[. .   . .] | F. 
+	   |   |   :  [[. .   . .].   . . ] |  .[. . F . .] |  .*T
+	   |   |   :  [[.T.   . .].   . . ] |  .[.*F. .*F.] |  . 
+	   |   |   :  [[. .   .F.].   .F. ] |  .[. .   . .] |  . 
+	   |   |   :  [[. . F . .].   . . ] |  .[. .   . .] |  . 
+	\endtruthtable
+	Invalid (in the full table, it's because row 4 is T T F).
+	\endanswer
+
+\endproblems
+
+(6 points.) For each of the following sentences, state whether it's true or false in this model:
+\answer
+	\firstordermodel 
+	Domain: Ruth, Alonzo, Kurt, Irene
+
+	Dog:    Alonzo, Irene
+	Happy:  Ruth, Alonzo, Kurt
+	Saw:    <Ruth, Ruth>, <Ruth, Alonzo>, <Ruth, Kurt>,
+	   .    <Alonzo, Alonzo>, <Alonzo, Irene>,
+	   .    <Kurt, Ruth>, <Kurt, Kurt>,
+	   .    <Irene, Ruth>, <Irene, Alonzo>, <Irene, Kurt>
+	\endfirstordermodel
+\endanswer\bigskip
+
+\problems
+\problem{9}
+$ Ex[Dog(x) ^ Happy(x)] $
+	\answer
+	 T / F
+	\endanswer
+
+\problem{10}
+$ Ax[Dog(x) > Happy(x)] $
+	\answer
+	 T / F
+	\endanswer
+
+\problem{11}
+$ Ax*[Happy(x) > Ey[Dog(y) ^ Saw(x,y)]*] $
+	\answer
+	 T / F
+	\endanswer
+\endproblems
+
+(4 points.) Give a countermodel for the following invalid argument.
+
+\problems
+\problem{12}
+\argument
+ Ax[Person(x) > Smiling(x)]
+ Ex[Smiling(x) ^ Working(x)]
+\argumentline
+ Ax[Person(x) > Working(x)]
+\endargument
+	\answer
+	\firstordermodel
+	Domain:  
+
+	Person:  
+	Smiling: 
+	Working: 
+	\endfirstordermodel
+	\endanswer
+\endproblems 
+
+(40 points.) For each of the following valid arguments, construct a Fitch-style natural deduction to prove its validity.
+
+\problems
+\problem{13}
+\argument
+ B > C
+ C > D
+ B ^ F
+\argumentline
+ G v D
+\endargument
+\points{12}
+	\answer
+	\fitchproof
+	 1. | B > C
+	 2. | C > D
+	 3. | B ^ F  ..  Goal: G v D
+	    |---
+	 4. | 
+	\endfitchproof
+	\endanswer
+
+\problem{14}
+\argument
+ P(a) > Q(a)
+ Q(b) ^ P(c)
+\argumentline
+ a=c > Q(c)
+\endargument
+\points{10}
+	\answer
+	\fitchproof
+	 1. | P(a) > Q(a)
+	 2. | Q(b) ^ P(c)  ..  Goal: a=c > Q(c)
+	    |---
+	 3. | 
+	\endfitchproof
+	\endanswer
+
+\problem{15}
+\argument
+ [B ^ C] > D
+ B > [C ^ -D]
+\argumentline
+ -B
+\endargument
+\points{8}
+	\answer
+	\fitchproof
+	 1. | [B ^ C] > D
+	 2. | B > [C ^ -D]  ..  Goal: -B
+	    |---
+	 3. | 
+	\endfitchproof
+	\endanswer
+
+\problem{16}
+\argument
+ Ax[Saw(ruth,x) > H(x)]
+ Ex Saw(ruth,x)
+\argumentline
+ Ex[Saw(ruth,x) ^ H(x)]
+\endargument
+\points{6}
+	\answer
+	\fitchproof
+	 1. | Ax[S(r,x) > H(x)]
+	 2. | Ex S(r,x)              ..  Goal: Ex[S(r,x) ^ H(x)]
+	    |---
+	 3. | 
+	\endfitchproof
+	\endanswer
+
+\problem{17}
+\argument
+ Ax[Saw(x,ruth) v Saw(ruth,x)]
+ AxAy[Saw(x,y) > Saw(y,x)]
+\argumentline
+ Ax Saw(x,ruth)
+\endargument
+\points{4}
+	\answer
+	\fitchproof
+	 1. | Ax[S(x,r) v S(r,x)]
+	 2. | AxAy[S(x,y) > S(y,x)]        ..  Goal: Ax S(x,r)
+	    |---
+	 3. | 
+	\endfitchproof
+	\endanswer
+
+\endproblems
+\bye
