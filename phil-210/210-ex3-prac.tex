@@ -69,25 +69,9 @@ Every dog saw a cat.
 	\truthtable
 	 B | C | D : *[[.B. ^ .C.]. > .D.*] | -.[.D. v .C.] | -.B
 	\truthtableline
-	 T | T | T :  [[.t. T .t.].*T .t. ] |*F.[.t. T .t.] |*F.t
-	 T | T | F :  [[.t. T .t.].*F .f. ] |*F.[.f. T .t.] |*F.t
-	 T | F | T :  [[.t. F .f.].*T .t. ] |*F.[.t. T .f.] |*F.t
-	 T | F | F :  [[.t. F .f.].*T .f. ] |*T.[.f. F .f.] |*F.t
-	 F | T | T :  [[.f. F .t.].*T .t. ] |*F.[.t. T .t.] |*T.f
-	 F | T | F :  [[.f. F .t.].*T .f. ] |*F.[.f. T .t.] |*T.f
-	 F | F | T :  [[.f. F .f.].*T .t. ] |*F.[.t. T .f.] |*T.f
-	 F | F | F :  [[.f. F .f.].*T .f. ] |*T.[.f. F .f.] |*T.f
+	   |   |   :  [[. .   . .].   . . ] |  .[. .   . .] |  . 
 	\endtruthtable
-	\truthtable
-	 B | C | D : *[[.B. ^ .C.]. > .D.*] | -.[.D. v .C.] | -.B
-	\truthtableline
-	   |   |   :  [[. .   . .]. T . . ] | T.[. .   . .] | F. 
-	   |   |   :  [[. .   . .].   . . ] |  .[. . F . .] |  .*T
-	   |   |   :  [[.T.   . .].   . . ] |  .[.*F. .*F.] |  . 
-	   |   |   :  [[. .   .F.].   .F. ] |  .[. .   . .] |  . 
-	   |   |   :  [[. . F . .].   . . ] |  .[. .   . .] |  . 
-	\endtruthtable
-	Invalid (in the full table, it's because row 4 is T T F).
+	Valid / Invalid
 	\endanswer
 
 \endproblems
