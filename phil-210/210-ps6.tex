@@ -19,9 +19,9 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \endargument
 	\answer
 	\fitchproof
-	 1. | F(a) ^ a=b
-	 2. | G(b)         ..  Goal: F(b) ^ G(a)
-	    |---
+         1. | F(a) ^ a=b
+         2. | G(b)         ..  Goal: F(b) ^ G(a)
+            |---
 	 3. | F(a)         .  ^ Elim: 1
 	 4. | a=b          .  ^ Elim: 1
 	 5. | F(b)         .  = Elim: 3, 4
