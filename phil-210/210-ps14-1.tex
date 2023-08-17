@@ -18,16 +18,16 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argumentline
  Ex -Happy(x)
 \endargument
-	\answer
-	\fitchproof
-	 1. | ExEy S(x,y)
-	 2. | AxAy[S(x,y) > -H(y)]  ..  Goal: Ex-H(x)
-	    |---
-	 3. |   | :a: Ey S(a,y)     ..  Setting up: E Elim: 1  .  Goal: Ex-H(x)
-	    |   |---
-	 4. |   |
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. | ExEy S(x,y)
+         2. | AxAy[S(x,y) > -H(y)]  ..  Goal: Ex-H(x)
+            |---
+         3. |   | :a: Ey S(a,y)     ..  Setting up: E Elim: 1  .  Goal: Ex-H(x)
+            |   |---
+         4. |   |
+        \endfitchproof
+        \endanswer
 
 \problem{2}
 \argument
@@ -36,13 +36,13 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
  -Ex Dog(x)
 \endargument
 \Hint Begin by setting up $-$ Intro.
-	\answer
-	\fitchproof
-	 1. | Ax-D(x)  ..  Goal: -ExD(x)
-	    |---
-	 2. | 
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. | Ax-D(x)  ..  Goal: -ExD(x)
+            |---
+         2. | 
+        \endfitchproof
+        \endanswer
 
 \problem{3}
 \argument
@@ -52,16 +52,16 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
  Ax Dog(x)
 \endargument
 \Hint This is the first time you have to use $A$ Intro.
-	\answer
-	\fitchproof
-	 1. | Ax[H(x) > D(x)]
-	 2. | AxH(x)          ..  Goal: AxD(x)
-	    |---
-	 3. |   | :a:          ..  Setting up: A Intro  .  Goal: D(a)
-	    |   |---
-	 4. |   |
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. | Ax[H(x) > D(x)]
+         2. | AxH(x)          ..  Goal: AxD(x)
+            |---
+         3. |   | :a:          ..  Setting up: A Intro  .  Goal: D(a)
+            |   |---
+         4. |   |
+        \endfitchproof
+        \endanswer
 
 \problem{4}
 \argument
@@ -70,14 +70,14 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argumentline
  Ax[Dog(x) > -Tired(x)]
 \endargument
-	\answer
-	\fitchproof
-	 1. | Ax[D(x) > H(x)]
-	 2. | Ax[H(x) > -T(x)]  ..  Goal: Ax[D(x) > -T(x)]
-	    |---
-	 3. | 
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. | Ax[D(x) > H(x)]
+         2. | Ax[H(x) > -T(x)]  ..  Goal: Ax[D(x) > -T(x)]
+            |---
+         3. | 
+        \endfitchproof
+        \endanswer
 
 \problem{5}
 \argument
@@ -85,13 +85,13 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argumentline
  Ax*[Cat(x) > Ay[Dog(y) > Saw(y,x)]*]
 \endargument
-	\answer
-	\fitchproof
-	 1. | AxAy*[[D(x) ^ C(y)] > S(x,y)*]  ..  Goal: Ax*[C(x) > Ay[D(y) > S(y,x)]*]
-	    |---
-	 2. | 
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. | AxAy*[[D(x) ^ C(y)] > S(x,y)*]  ..  Goal: Ax*[C(x) > Ay[D(y) > S(y,x)]*]
+            |---
+         2. | 
+        \endfitchproof
+        \endanswer
 
 \problem{6}
 \argument
@@ -100,13 +100,13 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
  Ex Happy(x)
 \endargument
 \Hint You don't need a name in a box for $A$ Elim.
-	\answer
-	\fitchproof
-	 1. | AxH(x)  ..  Goal: ExH(x)
-	    |---
-	 2. | 
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. | AxH(x)  ..  Goal: ExH(x)
+            |---
+         2. | 
+        \endfitchproof
+        \endanswer
 
 \problem{7}
 \argument
@@ -114,13 +114,13 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argumentline
  AxEy Saw(x,y)
 \endargument
-	\answer
-	\fitchproof
-	 1. | AxAy S(x,y)  ..  Goal: AxEy S(x,y)
-	    |---
-	 2. |
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. | AxAy S(x,y)  ..  Goal: AxEy S(x,y)
+            |---
+         2. |
+        \endfitchproof
+        \endanswer
 
 \problem{8}
 \argument
@@ -129,14 +129,14 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argumentline
  -Ax Logician(x)
 \endargument
-	\answer
-	\fitchproof
-	 1. | Ax[L(x) > H(x)]
-	 2. | -AxH(x)         ..  Goal: -AxL(x)
-	    |---
-	 3. |
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. | Ax[L(x) > H(x)]
+         2. | -AxH(x)         ..  Goal: -AxL(x)
+            |---
+         3. |
+        \endfitchproof
+        \endanswer
 
 \endproblems
 \bye

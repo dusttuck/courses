@@ -17,18 +17,18 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argumentline
  F(b) ^ G(a)
 \endargument
-	\answer
-	\fitchproof
+        \answer
+        \fitchproof
          1. | F(a) ^ a=b
          2. | G(b)         ..  Goal: F(b) ^ G(a)
             |---
-	 3. | F(a)         .  ^ Elim: 1
-	 4. | a=b          .  ^ Elim: 1
-	 5. | F(b)         .  = Elim: 3, 4
-	 6. |              .  = Elim: 2, 4
-	 7. |              .  ^ Intro: 5, 6
-	\endfitchproof
-	\endanswer
+         3. | F(a)         .  ^ Elim: 1
+         4. | a=b          .  ^ Elim: 1
+         5. | F(b)         .  = Elim: 3, 4
+         6. |              .  = Elim: 2, 4
+         7. |              .  ^ Intro: 5, 6
+        \endfitchproof
+        \endanswer
 
 \problem{2}
 \argument
@@ -37,19 +37,19 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argumentline
  G(a) ^ G(b)
 \endargument
-	\answer
-	\fitchproof
-	 1. | F(a) ^ [F(b) > G(b)]
-	 2. | a=b          ..  Goal: G(a) ^ G(b)
-	    |---
-	 3. | F(a)         .  ^ Elim: 1
-	 4. | F(b) > G(b)  .  ^ Elim: 1
-	 5. | F(b)         .  = Elim: 2, 3
-	 6. | 
-	 7. | 
-	 8. | 
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. | F(a) ^ [F(b) > G(b)]
+         2. | a=b          ..  Goal: G(a) ^ G(b)
+            |---
+         3. | F(a)         .  ^ Elim: 1
+         4. | F(b) > G(b)  .  ^ Elim: 1
+         5. | F(b)         .  = Elim: 2, 3
+         6. | 
+         7. | 
+         8. | 
+        \endfitchproof
+        \endanswer
 Note: This is only one of multiple options for line 5.
 
 \problem{3}
@@ -59,14 +59,14 @@ Note: This is only one of multiple options for line 5.
 \argumentline
  b=a > -G(a)
 \endargument
-	\answer
-	\fitchproofneg
-	 1. | [F(a) ^ F(b)] > -G(a)
-	 2. | F(b) ^ F(c)    ..  Goal: b=a > -G(a)
-	    |---
-	 3. | 
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproofneg
+         1. | [F(a) ^ F(b)] > -G(a)
+         2. | F(b) ^ F(c)    ..  Goal: b=a > -G(a)
+            |---
+         3. | 
+        \endfitchproof
+        \endanswer
 
 \problem{4}
 \argument
@@ -75,38 +75,38 @@ Note: This is only one of multiple options for line 5.
 \argumentline
  A < D
 \endargument
-	\answer
-	\fitchproof
-	 1. | A > [C ^ D]
-	 2. | D > [A ^ B]  ..  Goal: A < D
-	    |---
-	 3. |   | A        ..  Assumption  .  Setting up: < Intro  .  Goal: D
-	    |   |---
-	    |   | 
-	    |   +
-	    |   +
-	 ?. |   | D        ..  Assumption  .  Setting up: < Intro  .  Goal: A
-	    |   |---
-	    |   | 
-	    |   +
-	    | A < D        .  < Intro: 3-, ?-
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. | A > [C ^ D]
+         2. | D > [A ^ B]  ..  Goal: A < D
+            |---
+         3. |   | A        ..  Assumption  .  Setting up: < Intro  .  Goal: D
+            |   |---
+            |   | 
+            |   +
+            |   +
+         ?. |   | D        ..  Assumption  .  Setting up: < Intro  .  Goal: A
+            |   |---
+            |   | 
+            |   +
+            | A < D        .  < Intro: 3-, ?-
+        \endfitchproof
+        \endanswer
 
 \problem{5}
 \argument
 \argumentline
  *[[A ^ B] > C*] > *[A > [B > C]*]
 \endargument
-	\answer
-	\fitchproof
-	 1. |                    ..  Goal: *[[A ^ B] > C*] > *[A > [B > C]*]
-	    |---
-	 2. |   | [A ^ B] > C    ..  Setting up: > Intro  .  Goal: A > [B > C]
-	    |   |---
-	 3. |   | 
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. |                    ..  Goal: *[[A ^ B] > C*] > *[A > [B > C]*]
+            |---
+         2. |   | [A ^ B] > C    ..  Setting up: > Intro  .  Goal: A > [B > C]
+            |   |---
+         3. |   | 
+        \endfitchproof
+        \endanswer
 
 \problem{6}
 \argument
@@ -117,15 +117,15 @@ Note: This is only one of multiple options for line 5.
  [E ^ D] > F
 \endargument
 \Hint This problem requires something really tricky.
-	\answer
-	\fitchproof
-	 1. | [A ^ E] > F
-	 2. | [C ^ D] > B
-	 3. | [C > B] > A  ..  Goal: [E ^ D] > F
-	    |---
-	 4. | 
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. | [A ^ E] > F
+         2. | [C ^ D] > B
+         3. | [C > B] > A  ..  Goal: [E ^ D] > F
+            |---
+         4. | 
+        \endfitchproof
+        \endanswer
 
 \endproblems
 \bye

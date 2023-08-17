@@ -17,16 +17,16 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argumentline
  C v D
 \endargument
-	\answer
-	\fitchproof
-	 1. | A ^ B
-	 2. | B > C  ..  Goal: C v D
-	    |---
-	 3. | B      .  ^ Elim: 1
-	 4. |        .  > Elim: 2, 3
-	 5. |        .  v Intro: 4
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. | A ^ B
+         2. | B > C  ..  Goal: C v D
+            |---
+         3. | B      .  ^ Elim: 1
+         4. |        .  > Elim: 2, 3
+         5. |        .  v Intro: 4
+        \endfitchproof
+        \endanswer
 
 \problem{2}
 \argument
@@ -35,14 +35,14 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argumentline
  D
 \endargument
-	\answer
-	\fitchproof
-	 1. | A ^ [B > D]
-	 2. | [A v C] > B  ..  Goal: D
-	    |---
-	 3. | 
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. | A ^ [B > D]
+         2. | [A v C] > B  ..  Goal: D
+            |---
+         3. | 
+        \endfitchproof
+        \endanswer
 
 \problem{3}
 \argument
@@ -51,16 +51,16 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argumentline
  A > [C v D]
 \endargument
-	\answer
-	\fitchproof
-	 1. | A > B
-	 2. | B > C        ..  Goal: A > [C v D]
-	    |---
-	 3. |   | A        ..  Assumption  .  Setting up: > Intro  .  Goal: C v D
-	    |   |---
-	 4. |   | 
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. | A > B
+         2. | B > C        ..  Goal: A > [C v D]
+            |---
+         3. |   | A        ..  Assumption  .  Setting up: > Intro  .  Goal: C v D
+            |   |---
+         4. |   | 
+        \endfitchproof
+        \endanswer
 
 \problem{4}
 \argument
@@ -69,11 +69,11 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argumentline
  A > E
 \endargument
-	\answer
-	\fitchproof
-	 1. | 
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. | 
+        \endfitchproof
+        \endanswer
 
 \widerfitchsetup % This makes "Setting up: v Elim: #" fit better.
 \problem{5}
@@ -84,24 +84,24 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argumentline
  C
 \endargument
-	\answer
-	\fitchproof
-	 1. | A > C
-	 2. | B > C
-	 3. | [D ^ A] v [E ^ B]  ..  Goal: C
-	    |---
-	 4. |   | D ^ A  ..  Assumption  .  Setting up: v Elim: 3  .  Goal: C
-	    |   |---
-	    |   | 
-	    |   +
-	    |   +
-	 ?. |   | E ^ B  ..  Assumption  .  Setting up: v Elim: 3  .  Goal: C
-	    |   |---
-	    |   | 
-	    |   +
-	    | C          .  v Elim: 3, 4-, ?-
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. | A > C
+         2. | B > C
+         3. | [D ^ A] v [E ^ B]  ..  Goal: C
+            |---
+         4. |   | D ^ A  ..  Assumption  .  Setting up: v Elim: 3  .  Goal: C
+            |   |---
+            |   | 
+            |   +
+            |   +
+         ?. |   | E ^ B  ..  Assumption  .  Setting up: v Elim: 3  .  Goal: C
+            |   |---
+            |   | 
+            |   +
+            | C          .  v Elim: 3, 4-, ?-
+        \endfitchproof
+        \endanswer
 
 \problem{6}
 \argument
@@ -110,16 +110,16 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argumentline
  [A v B] > [C v D]
 \endargument
-	\answer
-	\fitchproof
-	 1. | A > C
-	 2. | B > D          ..  Goal: [A v B] > [C v D]
-	    |---
-	 3. |   | A v B      ..  Setting up: > Intro    .  Goal: C v D
-	    |   |---
-	 4. |   | 
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. | A > C
+         2. | B > D          ..  Goal: [A v B] > [C v D]
+            |---
+         3. |   | A v B      ..  Setting up: > Intro    .  Goal: C v D
+            |   |---
+         4. |   | 
+        \endfitchproof
+        \endanswer
 
 \problem{7}
 \argument
@@ -129,11 +129,11 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
  b=a > G(b)
 \endargument
 \Hint You can choose to set up $>$ Intro or $v$ Elim first. Both work.
-	\answer
-	\fitchproof
-	 1. | 
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. | 
+        \endfitchproof
+        \endanswer
 
 \problem{8}
 \argument
@@ -143,11 +143,11 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
  B
 \endargument
 \Hint This is the first proof where you need to use Reit.
-	\answer
-	\fitchproof
-	 1. | 
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. | 
+        \endfitchproof
+        \endanswer
 
 \problem{9}
 \argument
@@ -155,11 +155,11 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argumentline
  A > [B > A]
 \endargument
-	\answer\resetfitchsetup
-	\fitchproof
-	 1. | 
-	\endfitchproof
-	\endanswer
+        \answer\resetfitchsetup
+        \fitchproof
+         1. | 
+        \endfitchproof
+        \endanswer
 
 \problem{10}
 \argument
@@ -171,11 +171,11 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
  D > [E v G]
 \endargument
 \Hint Again, it doesn't matter if you set up $>$ Intro or $v$ Elim first.
-	\answer
-	\fitchproof
-	 1. | 
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. | 
+        \endfitchproof
+        \endanswer
 
 \problem{11}
 \argument
@@ -187,11 +187,11 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
  E
 \endargument
 \Hint This requires something similar to problem 6 from last week.
-	\answer
-	\fitchproof
-	 1. | 
-	\endfitchproof
-	\endanswer
+        \answer
+        \fitchproof
+         1. | 
+        \endfitchproof
+        \endanswer
 
 \endproblems
 \bye

@@ -10,16 +10,16 @@ Introduction to Formal Logic
 Begin with this model:
 
 \answer
-	\firstordermodel 
-	Domain: Ruth, Alonzo, Kurt, Irene
+        \firstordermodel 
+        Domain: Ruth, Alonzo, Kurt, Irene
 
-	Dog:    Alonzo, Irene
-	Happy:  Ruth, Alonzo, Kurt
-	Saw:    <Ruth, Ruth>, <Ruth, Alonzo>, <Ruth, Kurt>,
-	   .    <Alonzo, Alonzo>, <Alonzo, Irene>,
-	   .    <Kurt, Ruth>, <Kurt, Alonzo>, <Kurt, Irene>,
-	   .    <Irene, Ruth>, <Irene, Alonzo>, <Irene, Kurt>
-	\endfirstordermodel
+        Dog:    Alonzo, Irene
+        Happy:  Ruth, Alonzo, Kurt
+        Saw:    <Ruth, Ruth>, <Ruth, Alonzo>, <Ruth, Kurt>,
+           .    <Alonzo, Alonzo>, <Alonzo, Irene>,
+           .    <Kurt, Ruth>, <Kurt, Alonzo>, <Kurt, Irene>,
+           .    <Irene, Ruth>, <Irene, Alonzo>, <Irene, Kurt>
+        \endfirstordermodel
 \endanswer\bigskip
 
 For each of the following sentences, provide two extensions for the new predicate, one that makes the sentence true and one that makes it false. Don't change any of the existing extensions!
@@ -27,52 +27,52 @@ For each of the following sentences, provide two extensions for the new predicat
 \problems
 \problem{1}
 $ Ex[Dog(x) ^ Barked(x)] $
-	\answer
-	True: $Barked$: 
-	False: $Barked$: 
-	\endanswer
+        \answer
+        True: $Barked$: 
+        False: $Barked$: 
+        \endanswer
 
 \problem{2}
 $ Ex[Dog(x) ^ -Barked(x)] $
-	\answer
-	True: $Barked$: 
-	False: $Barked$: 
-	\endanswer
+        \answer
+        True: $Barked$: 
+        False: $Barked$: 
+        \endanswer
 
 \problem{3}
 $ Ax[Dog(x) > Barked(x)] $
-	\answer
-	True: $Barked$: 
-	False: $Barked$: 
-	\endanswer
+        \answer
+        True: $Barked$: 
+        False: $Barked$: 
+        \endanswer
 
 \problem{4}
 $ Ax*[[Dog(x) ^ Happy(x)] > Likes(ruth,x)*] $
-	\answer
-	True: $Likes$: 
-	False: $Likes$: 
-	\endanswer
+        \answer
+        True: $Likes$: 
+        False: $Likes$: 
+        \endanswer
 
 \problem{5}
 $ Ax[Saw(kurt,x) > Likes(x,ruth)] $
-	\answer
-	True: $Likes$: 
-	False: $Likes$: 
-	\endanswer
+        \answer
+        True: $Likes$: 
+        False: $Likes$: 
+        \endanswer
 
 \problem{6}
 $ Ax[Dog(x) > Ey Likes(x,y)] $
-	\answer
-	True: $Likes$: 
-	False: $Likes$: 
-	\endanswer
+        \answer
+        True: $Likes$: 
+        False: $Likes$: 
+        \endanswer
 
 \problem{7}
 $ Ax[Dog(x) > Ey Likes(y,x)] $
-	\answer
-	True: $Likes$: 
-	False: $Likes$: 
-	\endanswer
+        \answer
+        True: $Likes$: 
+        False: $Likes$: 
+        \endanswer
 
 \endproblems
 
@@ -86,15 +86,15 @@ Give a countermodel for each of the following arguments. They're all invalid.
 \argumentline
  Ax[Barked(x) > Dog(x)]
 \endargument
-	\answer
-	\firstordermodel
-	Domain: 
+        \answer
+        \firstordermodel
+        Domain: 
 
-	Dog:    
-	Happy:  
-	Barked: 
-	\endfirstordermodel
-	\endanswer
+        Dog:    
+        Happy:  
+        Barked: 
+        \endfirstordermodel
+        \endanswer
 
 \problem{9}
 \argument
@@ -102,14 +102,14 @@ Give a countermodel for each of the following arguments. They're all invalid.
 \argumentline
  Ax[Dog(x) > Happy(x)]
 \endargument
-	\answer
-	\firstordermodel
-	Domain: 
+        \answer
+        \firstordermodel
+        Domain: 
 
-	Dog:    
-	Happy:  
-	\endfirstordermodel
-	\endanswer
+        Dog:    
+        Happy:  
+        \endfirstordermodel
+        \endanswer
 
 \problem{10}
 \argument
@@ -117,14 +117,14 @@ Give a countermodel for each of the following arguments. They're all invalid.
 \argumentline
  Ax[Dog(x) > Ey Saw(y,x)]
 \endargument
-	\answer
-	\firstordermodel
-	Domain: 
+        \answer
+        \firstordermodel
+        Domain: 
 
-	Dog:    
-	Saw:    
-	\endfirstordermodel
-	\endanswer
+        Dog:    
+        Saw:    
+        \endfirstordermodel
+        \endanswer
 
 \endproblems
 \bye

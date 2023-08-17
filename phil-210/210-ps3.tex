@@ -1,8 +1,8 @@
 \input logicdocument
-\title{Phil 210 - Problem Set 3}
+\title{Phil 210 - Week 3 Problem Set}
 
 \heading
-Problem Set 3
+Week 3 Problem Set
 Your Name
 Introduction to Formal Logic
 \endheading
@@ -17,22 +17,22 @@ Construct truth tables for the following arguments. For each one, state whether 
 \argumentline
  -[C v B]
 \endargument
-	\answer
-	\truthtable
-	 A | B | C : A. ^ .-.B | C. v .A | -.[.C. v .B.]
-	\truthtableline
-	 T | T | T : t.*F .F.t | t.*T .t |*F.[.t. T .t.]
-	 T | T | F : t.*F .F.t | f.*T .t |*F.[.f. T .t.]
-	 T | F | T : t.*T .T.f | t.*T .t |*F.[.t. T .f.]
-	 T | F | F : t.*T .T.f | f.*T .t |*T.[.f. F .f.]
-	 F | T | T : f.*F .F.t | t.*T .f |*F.[.t. T .t.]
-	 F | T | F : f.*F .F.t | f.*F .f |*F.[.f. T .t.]
-	 F | F | T : f.*F .T.f | t.*T .f |*F.[.t. T .f.]
-	 F | F | F : f.*F .T.f | f.*F .f |*T.[.f. F .f.]
-	\endtruthtable
+        \answer
+        \truthtable
+         A | B | C : A. ^ .-.B | C. v .A | -.[.C. v .B.]
+        \truthtableline
+         T | T | T : t.*F .F.t | t.*T .t |*F.[.t. T .t.]
+         T | T | F : t.*F .F.t | f.*T .t |*F.[.f. T .t.]
+         T | F | T : t.*T .T.f | t.*T .t |*F.[.t. T .f.]
+         T | F | F : t.*T .T.f | f.*T .t |*T.[.f. F .f.]
+         F | T | T : f.*F .F.t | t.*T .f |*F.[.t. T .t.]
+         F | T | F : f.*F .F.t | f.*F .f |*F.[.f. T .t.]
+         F | F | T : f.*F .T.f | t.*T .f |*F.[.t. T .f.]
+         F | F | F : f.*F .T.f | f.*F .f |*T.[.f. F .f.]
+        \endtruthtable
 
-	Invalid. (You don't need to say why, but it's because row 3 is T T F.)
-	\endanswer
+        Invalid. (You don't need to say why, but it's because row 3 is T T F.)
+        \endanswer
 
 \problem{1}
 \argument
@@ -41,14 +41,14 @@ Construct truth tables for the following arguments. For each one, state whether 
 \argumentline
  -B
 \endargument
-	\answer
-	\truthtable
-	 A | B : -.A | -.[.B. ^ .A.] | -.B
-	\truthtableline
-	   |   :  .  |  .[. .   . .] |  . 
-	\endtruthtable
-	Valid/Invalid?
-	\endanswer
+        \answer
+        \truthtable
+         A | B : -.A | -.[.B. ^ .A.] | -.B
+        \truthtableline
+           |   :  .  |  .[. .   . .] |  . 
+        \endtruthtable
+        Valid/Invalid?
+        \endanswer
 
 \problem{2}
 \argument
@@ -58,14 +58,14 @@ Construct truth tables for the following arguments. For each one, state whether 
 \argumentline
  C
 \endargument
-	\answer
-	\truthtable
-	 A | B | C : A. v .B | -.A. v .C | -.B. v .C | C
-	\truthtableline
-	   |   |   :  .   .  |  . .   .  |  . .   .  |  
-	\endtruthtable
-	Valid/Invalid?
-	\endanswer
+        \answer
+        \truthtable
+         A | B | C : A. v .B | -.A. v .C | -.B. v .C | C
+        \truthtableline
+           |   |   :  .   .  |  . .   .  |  . .   .  |  
+        \endtruthtable
+        Valid/Invalid?
+        \endanswer
 
 \problem{3}
 \argument
@@ -74,14 +74,14 @@ Construct truth tables for the following arguments. For each one, state whether 
 \argumentline
  A v -[B v A]
 \endargument
-	\answer
-	\truthtable
-	 A | B : -.*[[.A. ^ .B.]. v .-.A.*] | [.-.B. v .A.]. ^ .B | A. v .-.[.B. v .A.]
-	\truthtableline
-	   |   :  . [[. .   . .].   . . . ] | [. . .   . .].   .  |  .   . .[. .   . .]
-	\endtruthtable
-	Valid/Invalid?
-	\endanswer
+        \answer
+        \truthtable
+         A | B : -.*[[.A. ^ .B.]. v .-.A.*] | [.-.B. v .A.]. ^ .B | A. v .-.[.B. v .A.]
+        \truthtableline
+           |   :  . [[. .   . .].   . . . ] | [. . .   . .].   .  |  .   . .[. .   . .]
+        \endtruthtable
+        Valid/Invalid?
+        \endanswer
 \endproblems
 
 For each of the following arguments, use an abbreviated truth table to determine whether it's valid or invalid. State your decision.
@@ -94,19 +94,19 @@ For each of the following arguments, use an abbreviated truth table to determine
 \argumentline
  -[B v C]
 \endargument
-	\answer
-	\truthtable
-	 A. v .-.C | -.[.A. v .B.] | -.[.B. v .C.]
-	\truthtableline
-	  . T . .  | T. . .   . .  | F. . .   . .
-	  .   . .  |  . . . F . .  |  . . . T . .
-	  .   . .  |  . .*F.  .*F. |  . . .   . .
-	 F.   . .  |  . . .   . .  |  . .F.   . .
-	  .   .T.  |  . . .   . .  |  . . .   .*T.
-	  .  ..T/*F|  . . .   . .  |  . . .   . .
-	\endtruthtable
-	Valid. (You don't need to say why, but it's because when we attempted to make both premises T and the conclusion F at the same time, we wound up contradicting ourselves.)
-	\endanswer
+        \answer
+        \truthtable
+         A. v .-.C | -.[.A. v .B.] | -.[.B. v .C.]
+        \truthtableline
+          . T . .  | T. . .   . .  | F. . .   . .
+          .   . .  |  . . . F . .  |  . . . T . .
+          .   . .  |  . .*F.  .*F. |  . . .   . .
+         F.   . .  |  . . .   . .  |  . .F.   . .
+          .   .T.  |  . . .   . .  |  . . .   .*T.
+          .  ..T/*F|  . . .   . .  |  . . .   . .
+        \endtruthtable
+        Valid. (You don't need to say why, but it's because when we attempted to make both premises T and the conclusion F at the same time, we wound up contradicting ourselves.)
+        \endanswer
 
 \problem{4}
 \argument
@@ -115,15 +115,15 @@ For each of the following arguments, use an abbreviated truth table to determine
 \argumentline
  -C
 \endargument
-	\answer
-	\truthtable
-	 A. v .B | -.[.C. ^ .B.] | -.C
-	\truthtableline
-	  . T .  | T. . .   . .  | F.
-	  .   .  |  . . .   . .  |  .
-	\endtruthtable
-	Valid/Invalid?
-	\endanswer
+        \answer
+        \truthtable
+         A. v .B | -.[.C. ^ .B.] | -.C
+        \truthtableline
+          . T .  | T. . .   . .  | F.
+          .   .  |  . . .   . .  |  .
+        \endtruthtable
+        Valid/Invalid?
+        \endanswer
 
 \problem{5}
 \argument
@@ -132,15 +132,15 @@ For each of the following arguments, use an abbreviated truth table to determine
 \argumentline
  -[D v B] ^ C
 \endargument
-	\answer
-	\truthtable
-	 A. ^ .[.B. v .C.] | -.B. ^ .-.[.A. ^ .D.] | -.[.D. v .B.]. ^ .C
-	\truthtableline
-	  . T . . .   . .  |  . . T . . . .   . .  |  . . .   . . . F . 
-	  .   . . .   . .  |  . .   . . . .   . .  |  . . .   . . .   . 
-	\endtruthtable
-	Valid/Invalid?
-	\endanswer
+        \answer
+        \truthtable
+         A. ^ .[.B. v .C.] | -.B. ^ .-.[.A. ^ .D.] | -.[.D. v .B.]. ^ .C
+        \truthtableline
+          . T . . .   . .  |  . . T . . . .   . .  |  . . .   . . . F . 
+          .   . . .   . .  |  . .   . . . .   . .  |  . . .   . . .   . 
+        \endtruthtable
+        Valid/Invalid?
+        \endanswer
 
 \endproblems
 
@@ -161,35 +161,35 @@ c: State whether the argument is valid or invalid, given both the connectives an
 \argumentline
  Taller(ruth,kurt) v Shorter(kurt,alonzo)
 \endargument
-	\answerlist
-	a:
-	\truthtable
-	 T(r,a). v .T(r,k) | -.[.S(k,a). ^ .T(r,a).] | T(r,k). v .S(k,a)
-	\truthtableline
-	       . T .       | T. .      .   .      .  |       . F .
-	       .   .       |  . .      . F .      .  |   *F  .   .  *F
-	       .   .   F   |  . . F    .   .      .  |       .   .
-	   *T  .   .       |  . .      .   .      .  |       .   .
-	       .   .       |  . .      .   .   T  .  |       .   .
-	\endtruthtable
-	Invalid, given only the connectives.
+        \answerlist
+        a:
+        \truthtable
+         T(r,a). v .T(r,k) | -.[.S(k,a). ^ .T(r,a).] | T(r,k). v .S(k,a)
+        \truthtableline
+               . T .       | T. .      .   .      .  |       . F .
+               .   .       |  . .      . F .      .  |   *F  .   .  *F
+               .   .   F   |  . . F    .   .      .  |       .   .
+           *T  .   .       |  . .      .   .      .  |       .   .
+               .   .       |  . .      .   .   T  .  |       .   .
+        \endtruthtable
+        Invalid, given only the connectives.
 
-	b:
-	\heightmodel
-	 Alonzo < Ruth = Kurt
-	\endheightmodel
-	\OR
-	\heightmodel
-	 Alonzo < Ruth < Kurt
-	\endheightmodel
+        b:
+        \heightmodel
+         Alonzo < Ruth = Kurt
+        \endheightmodel
+        \OR
+        \heightmodel
+         Alonzo < Ruth < Kurt
+        \endheightmodel
 
-:	(You only need to give one countermodel, but I've given two for illustration.)
+:        (You only need to give one countermodel, but I've given two for illustration.)
 
-	c: Invalid, given the connectives and predicates.
+        c: Invalid, given the connectives and predicates.
 
-:	(You don't need to say why, but it's because the height model depicts a situation in which $T(r,a)$ is T, $T(r,k)$ is F, and $S(k,a)$ is F, and we know from the abbreviated truth table that this makes both premises T and the conclusion F.)
+:        (You don't need to say why, but it's because the height model depicts a situation in which $T(r,a)$ is T, $T(r,k)$ is F, and $S(k,a)$ is F, and we know from the abbreviated truth table that this makes both premises T and the conclusion F.)
 
-	\endanswerlist
+        \endanswerlist
 
 \problem{6}
 \argument
@@ -198,22 +198,22 @@ c: State whether the argument is valid or invalid, given both the connectives an
 \argumentline
  -Taller(alonzo,kurt)
 \endargument
-	\answerlist
-	a:
-	\truthtable
-	 S(r,k). v .T(r,a) | -.[.T(a,k). ^ .T(r,a).] | -.T(a,k)
-	\truthtableline
-	       .   .       |  . .      .   .      .  |  .
-	\endtruthtable
-	Valid/Invalid?, given only the connectives.
+        \answerlist
+        a:
+        \truthtable
+         S(r,k). v .T(r,a) | -.[.T(a,k). ^ .T(r,a).] | -.T(a,k)
+        \truthtableline
+               .   .       |  . .      .   .      .  |  .
+        \endtruthtable
+        Valid/Invalid?, given only the connectives.
 
-	b: It's valid.\OR No countermodel is possible.\OR
-	\heightmodel
-	 
-	\endheightmodel
+        b: It's valid.\OR No countermodel is possible.\OR
+        \heightmodel
+         
+        \endheightmodel
 
-	c: Valid/Invalid?, given the connectives and predicates.
-	\endanswerlist
+        c: Valid/Invalid?, given the connectives and predicates.
+        \endanswerlist
 
 \problem{7}
 \argument
@@ -222,22 +222,22 @@ c: State whether the argument is valid or invalid, given both the connectives an
 \argumentline
  Taller(ruth,kurt) v -Taller(alonzo,kurt) 
 \endargument
-	\answerlist
-	a:
-	\truthtable
-	 T(r,a). ^ .T(a,k) | -.T(r,a). v .T(a,k) | T(r,k). v .-.T(a,k)
-	\truthtableline
-	       .   .       |  .      .   .       |       .   . .
-	\endtruthtable
-	Valid/Invalid?, given the connectives.
+        \answerlist
+        a:
+        \truthtable
+         T(r,a). ^ .T(a,k) | -.T(r,a). v .T(a,k) | T(r,k). v .-.T(a,k)
+        \truthtableline
+               .   .       |  .      .   .       |       .   . .
+        \endtruthtable
+        Valid/Invalid?, given the connectives.
 
-	b: It's valid.\OR No countermodel is possible.\OR
-	\heightmodel
-	 
-	\endheightmodel
+        b: It's valid.\OR No countermodel is possible.\OR
+        \heightmodel
+         
+        \endheightmodel
 
-	c: Valid/Invalid?, given the connectives and predicates.
-	\endanswerlist
+        c: Valid/Invalid?, given the connectives and predicates.
+        \endanswerlist
 
 \endproblems
 \bye

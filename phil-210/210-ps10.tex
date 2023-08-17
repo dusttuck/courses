@@ -1,8 +1,8 @@
 \input logicdocument
-\title{Phil 210 - Problem Set 10}
+\title{Phil 210 - Week 11 Problem Set}
 
 \heading
-Problem Set 10
+Week 11 Problem Set
 Your Name
 Introduction to Formal Logic
 \endheading
@@ -10,16 +10,16 @@ Introduction to Formal Logic
 Begin with this model:
 
 \answer
-	\firstordermodel 
-	Domain: Ruth, Alonzo, Kurt, Irene
+        \firstordermodel 
+        Domain: Ruth, Alonzo, Kurt, Irene
 
-	Dog:    Alonzo, Irene
-	Happy:  Ruth, Alonzo, Kurt
-	Saw:    <Ruth, Ruth>, <Ruth, Alonzo>, <Ruth, Kurt>,
-	   .    <Alonzo, Alonzo>, <Alonzo, Irene>,
-	   .    <Kurt, Ruth>, <Kurt, Alonzo>, <Kurt, Irene>,
-	   .    <Irene, Ruth>, <Irene, Alonzo>, <Irene, Kurt>
-	\endfirstordermodel
+        Dog:    Alonzo, Irene
+        Happy:  Ruth, Alonzo, Kurt
+        Saw:    <Ruth, Ruth>, <Ruth, Alonzo>, <Ruth, Kurt>,
+           .    <Alonzo, Alonzo>, <Alonzo, Irene>,
+           .    <Kurt, Ruth>, <Kurt, Alonzo>, <Kurt, Irene>,
+           .    <Irene, Ruth>, <Irene, Alonzo>, <Irene, Kurt>
+        \endfirstordermodel
 \endanswer\bigskip
 
 For each of the following sentences, state whether it's true or false.
@@ -28,104 +28,211 @@ For each of the following sentences, state whether it's true or false.
 \problems
 \problem{1}
 $ Happy(ruth) > Dog(ruth) $
-	\answer
-	 T / F
-	\endanswer
+        \answer
+         T / F
+        \endanswer
 
 \problem{2}
 $ -Happy(ruth) > -Dog(ruth) $
-	\answer
-	 T / F
-	\endanswer
+        \answer
+         T / F
+        \endanswer
 
 \problem{3}
 $ Ex[Dog(x) ^ Happy(x)] $
-	\answer
-	 T / F
-	\endanswer
+        \answer
+         T / F
+        \endanswer
 
 \problem{4}
 $ Ex[-Dog(x) ^ -Happy(x)] $
-	\answer
-	 T / F
-	\endanswer
+        \answer
+         T / F
+        \endanswer
 
 \problem{5}
 $ Ex[Saw(alonzo,x) ^ Dog(x)] $
-	\answer
-	 T / F
-	\endanswer
+        \answer
+         T / F
+        \endanswer
 
 \problem{6}
 $ Ex[Saw(alonzo,x) ^ -Dog(x)] $
-	\answer
-	 T / F
-	\endanswer
+        \answer
+         T / F
+        \endanswer
 
 \problem{7}
 $ Ax[Dog(x) > Saw(ruth,x)] $
-	\answer
-	 T / F
-	\endanswer
+        \answer
+         T / F
+        \endanswer
 
 \problem{8}
 $ Ax[Dog(x) > Saw(alonzo,x)] $
-	\answer
-	 T / F
-	\endanswer
+        \answer
+         T / F
+        \endanswer
 
 \problem{9}
 $ Ax[Saw(kurt,x) > Saw(x,kurt)] $
-	\answer
-	 T / F
-	\endanswer
+        \answer
+         T / F
+        \endanswer
 
 \problem{10}
 $ Ax[Saw(x,alonzo) > Saw(alonzo,x)] $
-	\answer
-	 T / F
-	\endanswer
+        \answer
+         T / F
+        \endanswer
 
 \problem{11}
 $ Ax*[[Dog(x) ^ Happy(x)] > Saw(irene,x)*] $
-	\answer
-	 T / F
-	\endanswer
+        \answer
+         T / F
+        \endanswer
 
 \problem{12}
 $ Ax*[Saw(irene,x) > [Dog(x) v Happy(x)]*] $
-	\answer
-	 T / F
-	\endanswer
+        \answer
+         T / F
+        \endanswer
 
 \problem{13}
 $ Ax[-Dog(x) > Happy(x)] $
-	\answer
-	 T / F
-	\endanswer
+        \answer
+         T / F
+        \endanswer
 
 \problem{14}
 $ Ax Ey Saw(x,y) $
-	\answer
-	 T / F
-	\endanswer
+        \answer
+         T / F
+        \endanswer
 
 \problem{15}
 $ Ey Ax Saw(x,y) $
-	\answer
-	 T / F
-	\endanswer
+        \answer
+         T / F
+        \endanswer
 
 \problem{16}
 $ Ax Ey Saw(y,x) $
-	\answer
-	 T / F
-	\endanswer
+        \answer
+         T / F
+        \endanswer
 
 \problem{17}
 $ Ey Ax Saw(y,x) $
-	\answer
-	 T / F
-	\endanswer
+        \answer
+         T / F
+        \endanswer
 
 \endproblems
+
+For each of the following sentences, provide two extensions for the new predicate, one that makes the sentence true and one that makes it false. Don't change any of the existing extensions!
+
+\problems
+\problem{18}
+$ Ex[Dog(x) ^ Barked(x)] $
+        \answer
+        True: $Barked$: 
+        False: $Barked$: 
+        \endanswer
+
+\problem{19}
+$ Ex[Dog(x) ^ -Barked(x)] $
+        \answer
+        True: $Barked$: 
+        False: $Barked$: 
+        \endanswer
+
+\problem{20}
+$ Ax[Dog(x) > Barked(x)] $
+        \answer
+        True: $Barked$: 
+        False: $Barked$: 
+        \endanswer
+
+\problem{21}
+$ Ax*[[Dog(x) ^ Happy(x)] > Likes(ruth,x)*] $
+        \answer
+        True: $Likes$: 
+        False: $Likes$: 
+        \endanswer
+
+\problem{22}
+$ Ax[Saw(kurt,x) > Likes(x,ruth)] $
+        \answer
+        True: $Likes$: 
+        False: $Likes$: 
+        \endanswer
+
+\problem{23}
+$ Ax[Dog(x) > Ey Likes(x,y)] $
+        \answer
+        True: $Likes$: 
+        False: $Likes$: 
+        \endanswer
+
+\problem{24}
+$ Ax[Dog(x) > Ey Likes(y,x)] $
+        \answer
+        True: $Likes$: 
+        False: $Likes$: 
+        \endanswer
+
+\endproblems
+
+Give a countermodel for each of the following arguments. They're all invalid.
+
+\problems
+\problem{25}
+\argument
+ Ax[Dog(x) > Happy(x)]
+ Ax[Happy(x) > Barked(x)]
+\argumentline
+ Ax[Barked(x) > Dog(x)]
+\endargument
+        \answer
+        \firstordermodel
+        Domain: 
+
+        Dog:    
+        Happy:  
+        Barked: 
+        \endfirstordermodel
+        \endanswer
+
+\problem{26}
+\argument
+ Ex[Dog(x) ^ Happy(x)]
+\argumentline
+ Ax[Dog(x) > Happy(x)]
+\endargument
+        \answer
+        \firstordermodel
+        Domain: 
+
+        Dog:    
+        Happy:  
+        \endfirstordermodel
+        \endanswer
+
+\problem{27}
+\argument
+ Ex Ey Saw(x,y)
+\argumentline
+ Ax[Dog(x) > Ey Saw(y,x)]
+\endargument
+        \answer
+        \firstordermodel
+        Domain: 
+
+        Dog:    
+        Saw:    
+        \endfirstordermodel
+        \endanswer
+
+\endproblems
+\bye
