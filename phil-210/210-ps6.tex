@@ -9,117 +9,7 @@ Introduction to Formal Logic
 
 For each of the following valid arguments, complete a Fitch-style natural deduction to prove its validity. Do this by filling in the missing lines, citations, or both.
 
-\problems
 \problem{1}
-\argument
- A ^ B
- C ^ D
-\argumentline
- A ^ D
-\endargument
-	\answer
-	\fitchproof
-	 1. | A ^ B
-	 2. | C ^ D  ..  Goal: A ^ D
-	    |---
-	 3. | A      .  ^ Elim: 1
-	 4. | B      .  ^ Elim: 1  .  (optional)
-	 5. |        .  ^ Elim: 2  .  (optional)
-	 6. |        .  ^ Elim: 2
-	 7. | A ^ D  .  ^ Intro: 3, 6
-	\endfitchproof
-	\endanswer
-
-\problem{2}
-\argument
- A
- A > B
- B > C
-\argumentline
- C
-\endargument
-	\answer
-	\fitchproof
-	 1. | A
-	 2. | A > B
-	 3. | B > C  ..  Goal: C
-	    |---
-	 4. | B      .  > Elim: 1, 2
-	 5. | C      .  
-	\endfitchproof
-	\endanswer
-
-\problem{3}
-\argument
- [A v C] ^ [B > D]
- [A v C] > B
-\argumentline
- D
-\endargument
-	\answer
-	\fitchproof
-	 1. | [A v C] ^ [B > D]
-	 2. | [A v C] > B        ..  Goal: D
-	    |---
-	 3. | A v C              .  ^ Elim: 1
-	 4. |                    .  ^ Elim: 1
-	 5. |                    .  > Elim: 2, 3
-	 6. | 
-	\endfitchproof
-	\endanswer
-
-\problem{4}
-\argument
- A > B
- C > D
- E > C
-\argumentline
- [A ^ E] > [B ^ D]
-\endargument
-	\answer
-	\fitchproofnegindent
-	 1. | A > B
-	 2. | C > D
-	 3. | E > C      ..  Goal: [A ^ E] > [B ^ D]
-	    |---
-	 4. |   | A ^ E  ..  Assumption  .  Setting up: > Intro  .  Goal: B ^ D
-	    |   |---
-	 5. |   | 
-	 6. |   | 
-	 7. |   | 
-	 8. |   | 
-	 9. |   | 
-	 10.|   | B ^ D   .  
-	    |   +
-	 11.| [A ^ E] > [B ^ D]  .  > Intro: 5-10
-	\endfitchproof
-	\endanswer
-
-\problem{5}
-\argument
- A > B
- B > C
-\argumentline
- [A ^ D] > [C ^ D]
-\endargument
-	\answer
-	\fitchproofnegindent
-	 1. | A > B
-	 2. | B > C      ..  Goal: [A ^ D] > [C ^ D]
-	    |---
-	 3. |   |        ..  Assumption  .  Setting up: > Intro  .  Goal: 
-	    |   |---
-	 4. |   | 
-	 5. |   | 
-	 6. |   | 
-	 7. |   | 
-	 8. |   | 
-	    |   +
-	 9. |            .  > Intro: 3-8
-	\endfitchproof
-	\endanswer
-
-\problem{6}
 \argument
  F(a) ^ a=b
  G(b)
@@ -139,7 +29,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 	\endfitchproof
 	\endanswer
 
-\problem{7}
+\problem{2}
 \argument
  F(a) ^ [F(b) > G(b)]
  a=b
@@ -161,7 +51,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 	\endanswer
 Note: This is only one of multiple options for line 5.
 
-\problem{8}
+\problem{3}
 \argument
  [F(a) ^ F(b)] > -G(a)
  F(b) ^ F(c)
@@ -177,7 +67,7 @@ Note: This is only one of multiple options for line 5.
 	\endfitchproof
 	\endanswer
 
-\problem{9}
+\problem{4}
 \argument
  A > [C ^ D]
  D > [A ^ B]
@@ -202,24 +92,7 @@ Note: This is only one of multiple options for line 5.
 	\endfitchproof
 	\endanswer
 
-\problem{10}
-\argument
-\argumentline
- [A > B] > *[[A ^ -C] > B*]
-\endargument
-	\answer
-	\fitchproof
-	 1. |                 ..  Goal: [A > B] > *[[A ^ -C] > B*]
-	    |---
-	 2. |   | A > B       ..  Setting up: > Intro  .  Goal: [A ^ -C] > B
-	    |   |---
-	 3. |   |   | A ^ -C  ..  Setting up: > Intro  .  Goal: B
-	    |   |   |---
-	 4. |   |   | 
-	\endfitchproof
-	\endanswer
-
-\problem{11}
+\problem{5}
 \argument
 \argumentline
  *[[A ^ B] > C*] > *[A > [B > C]*]
@@ -234,7 +107,7 @@ Note: This is only one of multiple options for line 5.
 	\endfitchproof
 	\endanswer
 
-\problem{12}
+\problem{6}
 \argument
  [A ^ E] > F
  [C ^ D] > B
