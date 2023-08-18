@@ -1,0 +1,89 @@
+\input logicdocument
+\title{Phil 210 - Problem Set 14.2}
+
+\heading
+Problem Set 14.2
+Your Name
+Introduction to Formal Logic
+\endheading
+
+For each of the following valid arguments, complete a Fitch-style natural deduction to prove its validity. They are all more difficult than anything that will be on the quiz, so they are purely for practice. The last two are optional because they're especially difficult, and as long as you make any sort of good-faith effort on the other three, you'll receive a grade of at least 9.5/10.
+
+\quantifiers
+\problems
+\problem{1}
+\argument
+ -Ex Dog(x)
+\argumentline
+ Ax -Dog(x)
+\endargument
+        \answer
+        \fitchproof
+         1. | -Ex D(x)         ..  Goal: Ax -D(x)
+            |---
+         2. |
+        \endfitchproof
+        \endanswer
+
+\problem{2}
+\argument
+ -Ax Dog(x)
+\argumentline
+ Ex -Dog(x)
+\endargument
+\Hint You have to use the last resort option twice.
+        \answer
+        \fitchproof
+         1. | -Ax D(x)              ..  Goal: Ex -D(x)
+            |---
+         2. |
+        \endfitchproof
+        \endanswer
+
+\problem{3}
+\argument
+
+\argumentline
+ -ExAx[Saw(x,y) < -Saw(y,y)]
+\endargument
+        \answer
+        \fitchproof
+         1. |                                   ..  Goal: Ax D(x)
+            |---
+         2. |
+        \endfitchproof
+        \endanswer
+
+\resetasterisk
+\problem{*}
+\argument
+ Ax[Dog(x) > Happy(x)]
+ Ex -Happy(x) > Ex Dog(x)
+\argumentline
+ Ex Happy(x)
+\endargument
+        \answer
+        \fitchproof
+         1. | Ax[D(x) > H(x)]
+         2. | Ex -H(x) > Ex D(x)       ..  Goal: Ex H(x)
+            |---
+         3. |
+        \endfitchproof
+        \endanswer
+
+\problem{**}
+\argument
+
+\argumentline
+ Ex[Dog(x) > Ay Dog(y)]
+\endargument
+        \answer
+        \fitchproof
+         1. |                                     ..  Goal: Ex[D(x) > Ay D(y)]
+            |---
+         2. |
+        \endfitchproof
+        \endanswer
+
+\endproblems
+\bye
