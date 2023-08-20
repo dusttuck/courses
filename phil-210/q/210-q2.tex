@@ -1,0 +1,118 @@
+\input logicdocument
+\title{Phil 210 - Quiz 2}
+
+\heading
+Quiz 2
+Your Name
+Introduction to Formal Logic
+\endheading
+
+I've begun each of the following truth tables. Complete them by filling in the missing Ts and Fs.
+
+\problems
+\problem{1} (20 points.)
+\truthtable
+ A | B : A.  ^  .-.B
++++++++++++++++++++++
+ T | T : t. *F  .F.t
+ T | F : t. *T  .T.f
+ F | T : f. *   .F.t
+ F | F : f. *   .T.f
+\endtruthtable
+
+\problem{2} (15 points.)
+\truthtable
+ A | B : -.A.  v  .B
++++++++++++++++++++++
+ T | T :  .t. *   .t
+ T | F :  .t. *   .f
+ F | T :  .f. *   .t
+ F | F :  .f. *   .f
+\endtruthtable
+
+\problem{3} (15 points.)
+\truthtable
+ A | B : -.[.A. v .B.]
++++++++++++++++++++++++
+ T | T :* .[.t.   .t.]
+ T | F :* .[.t.   .f.]
+ F | T :* .[.f.   .t.]
+ F | F :* .[.f.   .f.]
+\endtruthtable
+
+\problem{4} (15 points.)
+\truthtable
+ A | B | C : [.A. v .B.].  ^  .C
++++++++++++++++++++++++++++++++++
+ T | T | T : [.t.   .t.]. *   .t
+ T | T | F : [.t.   .t.]. *   .f
+ T | F | T : [.t.   .f.]. *   .t
+ T | F | F : [.t.   .f.]. *   .f
+ F | T | T : [.f.   .t.]. *   .t
+ F | T | F : [.f.   .t.]. *   .f
+ F | F | T : [.f.   .f.]. *   .t
+ F | F | F : [.f.   .f.]. *   .f
+\endtruthtable
+
+\endproblems
+
+Construct truth tables for the following sentences. For each one, state whether it's a tautology, a contradiction, or neither.
+
+\problems
+\problem{4} (10 points.)
+$ -[A v B] ^ [C ^ B] $
+        \answer
+        \truthtable
+         A | B | C : -.[.A. v .B.].  ^  .[.C. ^ .B.]
+        +++++++++++++++++++++++++++++++++++++++++++
+         T | T | T :  .[. .   . .]. *   .[. .   . .]
+         T | T | F :  .[. .   . .]. *   .[. .   . .]
+         T | F | T :  .[. .   . .]. *   .[. .   . .]
+         T | F | F :  .[. .   . .]. *   .[. .   . .]
+         F | T | T :  .[. .   . .]. *   .[. .   . .]
+         F | T | F :  .[. .   . .]. *   .[. .   . .]
+         F | F | T :  .[. .   . .]. *   .[. .   . .]
+         F | F | F :  .[. .   . .]. *   .[. .   . .]
+        \endtruthtable
+        Tautology/Contradiction/Neither?
+        \endanswer
+
+\problem{5} (10 points.)
+$ -*[A v [B ^ -A]*] $
+        \answer
+        \truthtable
+         A | B :  -.*[.A. v .[.B. ^ .-.A.]*]
+        +++++++++++++++++++++++++++++++++++++
+         T | T : * . [. .   .[. .   . . .] ]
+         T | F : * . [. .   .[. .   . . .] ]
+         F | T : * . [. .   .[. .   . . .] ]
+         F | F : * . [. .   .[. .   . . .] ]
+        \endtruthtable
+        Tautology/Contradiction/Neither?
+        \endanswer
+
+\endproblems
+
+Construct truth tables for the following sentences and state which ones are equivalent.
+
+\problems
+\problem{6} (15 points.)
+\list
+a: $ -A ^ B $
+b: $ -[A v -B] $
+c: $ B ^ -[A v B] $
+\endlist
+        \answer
+        \truthtable
+         A | B : -.A. ^ .B | -.[.A. v .-.B.] | B. ^ .-.[.A. v .B.]
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+           |   :  . .*  .  |* .[. .   . . .] |  .*  . .[. .   . .]
+           |   :  . .*  .  |* .[. .   . . .] |  .*  . .[. .   . .]
+           |   :  . .*  .  |* .[. .   . . .] |  .*  . .[. .   . .]
+           |   :  . .*  .  |* .[. .   . . .] |  .*  . .[. .   . .]
+        \endtruthtable
+        Equivalences?
+        \endanswer
+
+\endproblems
+\bye
