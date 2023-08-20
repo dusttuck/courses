@@ -14,7 +14,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  A
  -[A ^ B]
-\argumentline
+++++++++++
  -B
 \endargument
         \answer
@@ -36,7 +36,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
  A > B
  B > C
  -C
-\argumentline
++++++++
  -A
 \endargument
         \answer
@@ -55,7 +55,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  -A > -B
  B
-\argumentline
++++++++++
  A
 \endargument
 \Hint You have to prove $--A$ first (the ``last resort'' option).
@@ -78,7 +78,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  [A ^ B] > C
  -C
-\argumentline
++++++++++++++
  A > -B
 \endargument
         \answer
@@ -97,7 +97,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  A v B
  -B
-\argumentline
++++++++
  A
 \endargument
 \Hint Problems 5--7 are the first times you have to use $!$ Elim.
@@ -125,7 +125,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
  A v B
  A > C
  B > D
-\argumentline
+++++++++
  -D > C
 \endargument
         \answer
@@ -138,7 +138,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  A v B
  C v -B
-\argumentline
+++++++++
  A v C
 \endargument
 \Hint You'll have to do one $v$ Elim inside another.
@@ -154,7 +154,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
  [A ^ B] > [C > D]
  [-E ^ -F] > [B ^ -D]
  C ^ -E
-\argumentline
+++++++++++++++++++++++
  A > F
 \endargument
 \Hint Remember, when all else fails, use the last resort option.
@@ -168,7 +168,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  -[-A ^ B]
  -[-B v C]
-\argumentline
++++++++++++
  A
 \endargument
 \Hint Problems 9 and 10 are much harder than anything on the exam.
@@ -181,7 +181,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \problem{10}
 \argument
  A > B
-\argumentline
+++++++++
  -A v B
 \endargument
         \answer

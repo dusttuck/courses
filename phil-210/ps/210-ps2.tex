@@ -13,7 +13,7 @@ I've begun each of the following truth tables. Complete them by filling in the m
 \problem{1}
 \truthtable
  L(a) | L(r) : -.L(a).  v  .L(r)
-\truthtableline
++++++++++++++++++++++++++++++++++
   T   |  T   : F. t  . *T  . t
   T   |  F   : F. t  . *F  . f
   F   |  T   : T. f  . *   . t
@@ -23,7 +23,7 @@ I've begun each of the following truth tables. Complete them by filling in the m
 \problem{2}
 \truthtable
  L(a) | L(r) :  -.[.L(a). v .L(r).]
-\truthtableline
+++++++++++++++++++++++++++++++++++++
   T   |  T   : * .[. t  . T . t  .]
   T   |  F   : * .[. t  . T . f  .]
   F   |  T   : * .[. f  . T . t  .]
@@ -34,7 +34,7 @@ I've begun each of the following truth tables. Complete them by filling in the m
 \problem{3}
 \truthtable
  A | B : [.A. ^ .B.].  v  .-.B
-\truthtableline
++++++++++++++++++++++++++++++++
  T | T : [.t. T .t.]. *   . .t
  T | F : [.t. F .f.]. *   . .f
  F | T : [.f. F .t.]. *   . .t
@@ -44,7 +44,7 @@ I've begun each of the following truth tables. Complete them by filling in the m
 \problem{4}
 \truthtable
  A | B | C : A.  ^  .-.[.B. v .C.]
-\truthtableline
++++++++++++++++++++++++++++++++++++
  T | T | T : t. *   . . .t.   .t
  T | T | F : t. *   . . .t.   .f
  T | F | T : t. *   . . .f.   .t
@@ -67,7 +67,7 @@ $ A ^ -[A v B] $
         \answer
         \truthtable
          A | B : A.  ^  .-.[.A. v .B.]
-        \truthtableline
+        +++++++++++++++++++++++++++++++
          T | T : t. *F  .F.[.t. T .t.]
          T | F : t. *F  .F.[.t. T .f.]
          F | T : f. *F  .F.[.f. T .t.]
@@ -81,7 +81,7 @@ $ [A ^ B] v [A ^ -B] $
         \answer
         \truthtable
          A | B : [.A. ^ .B.].  v  .[.A. ^ . - .B.]
-        \truthtableline
+        +++++++++++++++++++++++++++++++++++++++++++
          T | T : [. .   . .]. *   .[. .   .   . .]
          T | F : [. .   . .]. *   .[. .   .   . .]
          F | T : [. .   . .]. *   .[. .   .   . .]
@@ -95,7 +95,7 @@ $ -*[A v [B ^ C]*] v [A v B] $
         \answer
         \truthtable
          A | B | C : -.*[.A. v .[.B. ^ .C.]*].  v  .[.A. v .B.]
-        \truthtableline
+        ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
          T | T | T :  . [. .   .[. .   . .] ]. *   .[. .   . .]
          T | T | F :  . [. .   .[. .   . .] ]. *   .[. .   . .]
          T | F | T :  . [. .   .[. .   . .] ]. *   .[. .   . .]
@@ -113,7 +113,7 @@ $ -*[[-A v -C] v [B v C]*] $
         \answer
         \truthtable
          A | B | C :  -.*[[.-.A. v .-.C.]. v .[.B. v .C.]*]
-        \truthtableline
+        ++++++++++++++++++++++++++++++++++++++++++++++++++++
            |   |   : * . [[. . .   . . .].   .[. .   . .] ]
            |   |   : * . [[. . .   . . .].   .[. .   . .] ]
            |   |   : * . [[. . .   . . .].   .[. .   . .] ]
@@ -140,7 +140,7 @@ c. $ -[-A ^ B] $
         \answer
         \truthtable
          A | B : A. v .-.B | -.[.A. ^ .-.B.] | -.[.-.A. ^ .B.]
-        \truthtableline
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++
          T | T : t.*T .T.t |*T.[.t. F .F.t.] |*T.[.F.t. F .t.]
          T | F : t.*T .T.f |*F.[.t. T .T.f.] |*T.[.F.t. F .f.]
          F | T : f.*F .F.t |*T.[.f. F .F.t.] |*F.[.T.f. T .t.]
@@ -159,7 +159,7 @@ d. $ -A v -[B ^ A] $
         \answer
         \truthtable
          A | B : -.[.A. v .B.] | -.[.A. ^ .B.] | -.A. ^ .-.B | -.A. v .-.[.B. ^ .A.]
-        \truthtableline
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
            |   :* .[. .   . .] |* .[. .   . .] |  . .*  . .  |  . .*  . .[. .   . .]
         \endtruthtable
         Equivalences?
@@ -174,7 +174,7 @@ c. $ [A v B] ^ [A v C] $
         \answer
         \truthtable
          A | B | C : A. v .[.B. ^ .C.] | A. ^ .[.B. v .C.] | [.A. v .B.]. ^ .[.A. v .C.]
-        \truthtableline
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
            |   |   :  .   .[. .   . .] |  .   .[. .   . .] | [. .   . .].   .[. .   . .]
         \endtruthtable
         Equivalences?

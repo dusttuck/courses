@@ -14,13 +14,13 @@ Construct truth tables for the following arguments. For each one, state whether 
 \argument
  A ^ -B
  C v A
-\argumentline
+++++++++++
  -[C v B]
 \endargument
         \answer
         \truthtable
          A | B | C : A. ^ .-.B | C. v .A | -.[.C. v .B.]
-        \truthtableline
+        +++++++++++++++++++++++++++++++++++++++++++++++++
          T | T | T : t.*F .F.t | t.*T .t |*F.[.t. T .t.]
          T | T | F : t.*F .F.t | f.*T .t |*F.[.f. T .t.]
          T | F | T : t.*T .T.f | t.*T .t |*F.[.t. T .f.]
@@ -38,13 +38,13 @@ Construct truth tables for the following arguments. For each one, state whether 
 \argument
  -A
  -[B ^ A]
-\argumentline
+++++++++++
  -B
 \endargument
         \answer
         \truthtable
          A | B : -.A | -.[.B. ^ .A.] | -.B
-        \truthtableline
+        +++++++++++++++++++++++++++++++++++
            |   :  .  |  .[. .   . .] |  . 
         \endtruthtable
         Valid/Invalid?
@@ -55,13 +55,13 @@ Construct truth tables for the following arguments. For each one, state whether 
  A v B
  -A v C
  -B v C
-\argumentline
+++++++++
  C
 \endargument
         \answer
         \truthtable
          A | B | C : A. v .B | -.A. v .C | -.B. v .C | C
-        \truthtableline
+        +++++++++++++++++++++++++++++++++++++++++++++++++
            |   |   :  .   .  |  . .   .  |  . .   .  |  
         \endtruthtable
         Valid/Invalid?
@@ -71,13 +71,13 @@ Construct truth tables for the following arguments. For each one, state whether 
 \argument
  -*[[A ^ B] v -A*]
  [-B v A] ^ B
-\argumentline
++++++++++++++++++++
  A v -[B v A]
 \endargument
         \answer
         \truthtable
          A | B : -.*[[.A. ^ .B.]. v .-.A.*] | [.-.B. v .A.]. ^ .B | A. v .-.[.B. v .A.]
-        \truthtableline
+        ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
            |   :  . [[. .   . .].   . . . ] | [. . .   . .].   .  |  .   . .[. .   . .]
         \endtruthtable
         Valid/Invalid?
@@ -91,13 +91,13 @@ For each of the following arguments, use an abbreviated truth table to determine
 \argument
  A v -C
  -[A v B]
-\argumentline
+++++++++++
  -[B v C]
 \endargument
         \answer
         \truthtable
          A. v .-.C | -.[.A. v .B.] | -.[.B. v .C.]
-        \truthtableline
+        +++++++++++++++++++++++++++++++++++++++++++
           . T . .  | T. . .   . .  | F. . .   . .
           .   . .  |  . . . F . .  |  . . . T . .
           .   . .  |  . .*F.  .*F. |  . . .   . .
@@ -112,13 +112,13 @@ For each of the following arguments, use an abbreviated truth table to determine
 \argument
  A v B
  -[C ^ B]
-\argumentline
+++++++++++
  -C
 \endargument
         \answer
         \truthtable
          A. v .B | -.[.C. ^ .B.] | -.C
-        \truthtableline
+        +++++++++++++++++++++++++++++++
           . T .  | T. . .   . .  | F.
           .   .  |  . . .   . .  |  .
         \endtruthtable
@@ -129,13 +129,13 @@ For each of the following arguments, use an abbreviated truth table to determine
 \argument
  A ^ [B v C]
  -B ^ -[A ^ D]
-\argumentline
++++++++++++++++
  -[D v B] ^ C
 \endargument
         \answer
         \truthtable
          A. ^ .[.B. v .C.] | -.B. ^ .-.[.A. ^ .D.] | -.[.D. v .B.]. ^ .C
-        \truthtableline
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
           . T . . .   . .  |  . . T . . . .   . .  |  . . .   . . . F . 
           .   . . .   . .  |  . .   . . . .   . .  |  . . .   . . .   . 
         \endtruthtable
@@ -158,14 +158,14 @@ c: State whether the argument is valid or invalid, given both the connectives an
 \argument
  Taller(ruth,alonzo) v Taller(ruth,kurt)
  -[Shorter(kurt,alonzo) ^ Taller(ruth,kurt)]
-\argumentline
++++++++++++++++++++++++++++++++++++++++++++++
  Taller(ruth,kurt) v Shorter(kurt,alonzo)
 \endargument
         \answerlist
         a:
         \truthtable
          T(r,a). v .T(r,k) | -.[.S(k,a). ^ .T(r,a).] | T(r,k). v .S(k,a)
-        \truthtableline
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                . T .       | T. .      .   .      .  |       . F .
                .   .       |  . .      . F .      .  |   *F  .   .  *F
                .   .   F   |  . . F    .   .      .  |       .   .
@@ -195,14 +195,14 @@ c: State whether the argument is valid or invalid, given both the connectives an
 \argument
  Shorter(ruth,kurt) v Taller(ruth,alonzo)
  -[Taller(alonzo,kurt) ^ Taller(ruth,alonzo)]
-\argumentline
+++++++++++++++++++++++++++++++++++++++++++++++
  -Taller(alonzo,kurt)
 \endargument
         \answerlist
         a:
         \truthtable
          S(r,k). v .T(r,a) | -.[.T(a,k). ^ .T(r,a).] | -.T(a,k)
-        \truthtableline
+        ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                .   .       |  . .      .   .      .  |  .
         \endtruthtable
         Valid/Invalid?, given only the connectives.
@@ -219,14 +219,14 @@ c: State whether the argument is valid or invalid, given both the connectives an
 \argument
  Taller(ruth,alonzo) ^ Taller(alonzo,kurt)
  -Taller(ruth,alonzo) v Taller(alonzo,kurt)
-\argumentline
+++++++++++++++++++++++++++++++++++++++++++++
  Taller(ruth,kurt) v -Taller(alonzo,kurt) 
 \endargument
         \answerlist
         a:
         \truthtable
          T(r,a). ^ .T(a,k) | -.T(r,a). v .T(a,k) | T(r,k). v .-.T(a,k)
-        \truthtableline
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                .   .       |  .      .   .       |       .   . .
         \endtruthtable
         Valid/Invalid?, given the connectives.

@@ -14,7 +14,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  F(a) ^ a=b
  G(b)
-\argumentline
++++++++++++++
  F(b) ^ G(a)
 \endargument
         \answer
@@ -34,7 +34,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  F(a) ^ [F(b) > G(b)]
  a=b
-\argumentline
++++++++++++++
  G(a) ^ G(b)
 \endargument
         \answer
@@ -56,7 +56,7 @@ Note: This is only one of multiple options for line 5.
 \argument
  [F(a) ^ F(b)] > -G(a)
  F(b) ^ F(c)
-\argumentline
++++++++++++++++++++++++
  b=a > -G(a)
 \endargument
         \answer
@@ -72,7 +72,7 @@ Note: This is only one of multiple options for line 5.
 \argument
  A > [C ^ D]
  D > [A ^ B]
-\argumentline
++++++++++++++
  A < D
 \endargument
         \answer
@@ -95,7 +95,8 @@ Note: This is only one of multiple options for line 5.
 
 \problem{5}
 \argument
-\argumentline
+
++++++++++++++++++++++++++++++++++++
  *[[A ^ B] > C*] > *[A > [B > C]*]
 \endargument
         \answer
@@ -113,7 +114,7 @@ Note: This is only one of multiple options for line 5.
  [A ^ E] > F
  [C ^ D] > B
  [C > B] > A
-\argumentline
++++++++++++++
  [E ^ D] > F
 \endargument
 \Hint This problem requires something really tricky.

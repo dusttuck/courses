@@ -15,7 +15,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  Ax[Logician(x) > Happy(x)]
  Logician(ruth) 
-\argumentline
+++++++++++++++++++++++++++++
  Happy(ruth) 
 \endargument
         \answer
@@ -31,7 +31,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  Ax[Logician(x) > Happy(x)]
  -Happy(ruth) 
-\argumentline
+++++++++++++++++++++++++++++
  -Logician(ruth) 
 \endargument
 \Hint Begin by setting up $-$ Intro.
@@ -49,7 +49,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
  Ax[Logician(x) > Happy(x)]
  Logician(ruth)
  Ex Happy(x) > Happy(alonzo)
-\argumentline
++++++++++++++++++++++++++++++
  Happy(alonzo) 
 \endargument
 \Hint Premise 3 is a $>$ sentence, so don't use $E$ Elim.
@@ -67,7 +67,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  Ax[Logician(x) > Happy(x)]
  Logician(ruth) v Logician(alonzo)
-\argumentline
++++++++++++++++++++++++++++++++++++
  Ex Happy(x)
 \endargument
 \Hint You can do $A$ Elim multiple times.
@@ -84,7 +84,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  Ax[Logician(x) > Happy(x)]
  Ex Logician(x)
-\argumentline
+++++++++++++++++++++++++++++
  Ex Happy(x)
 \endargument
 \Hint This is the first time you have to use $E$ Elim.
@@ -103,7 +103,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  Ex-Happy(x)
  Ax[Happy(x) v Sad(x)]
-\argumentline
++++++++++++++++++++++++
  Ex Sad(x)
 \endargument
         \answer

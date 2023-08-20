@@ -14,7 +14,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  A ^ B
  B > C
-\argumentline
++++++++
  C v D
 \endargument
         \answer
@@ -32,7 +32,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  A ^ [B > D]
  [A v C] > B
-\argumentline
++++++++++++++
  D
 \endargument
         \answer
@@ -48,7 +48,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  A > B
  B > C
-\argumentline
++++++++++++++
  A > [C v D]
 \endargument
         \answer
@@ -66,7 +66,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  A > [B ^ C]
  [B v D] > E
-\argumentline
++++++++++++++
  A > E
 \endargument
         \answer
@@ -81,7 +81,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
  A > C
  B > C
  [D ^ A] v [E ^ B]
-\argumentline
++++++++++++++++++++
  C
 \endargument
         \answer
@@ -107,7 +107,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  A > C
  B > D
-\argumentline
++++++++++++++++++++
  [A v B] > [C v D]
 \endargument
         \answer
@@ -125,7 +125,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  F(a) v G(a)
  F(b) > G(b)
-\argumentline
++++++++++++++
  b=a > G(b)
 \endargument
 \Hint You can choose to set up $>$ Intro or $v$ Elim first. Both work.
@@ -139,7 +139,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  A v B
  A > B
-\argumentline
++++++++
  B
 \endargument
 \Hint This is the first proof where you need to use Reit.
@@ -152,7 +152,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \problem{9}
 \argument
 
-\argumentline
++++++++++++++
  A > [B > A]
 \endargument
         \answer\resetfitchsetup
@@ -167,7 +167,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
  A > C
  B > [F ^ G]
  C > [D > E]
-\argumentline
++++++++++++++
  D > [E v G]
 \endargument
 \Hint Again, it doesn't matter if you set up $>$ Intro or $v$ Elim first.
@@ -183,7 +183,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
  A > C
  [C > B] > D
  [C v D] > E
-\argumentline
++++++++++++++
  E
 \endargument
 \Hint This requires something similar to problem 6 from last week.

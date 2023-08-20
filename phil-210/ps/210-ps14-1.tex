@@ -15,7 +15,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  ExEy Saw(x,y)
  AxAy[Saw(x,y) > -Happy(y)]
-\argumentline
+++++++++++++++++++++++++++++
  Ex -Happy(x)
 \endargument
         \answer
@@ -32,7 +32,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \problem{2}
 \argument
  Ax -Dog(x)
-\argumentline
+++++++++++++
  -Ex Dog(x)
 \endargument
 \Hint Begin by setting up $-$ Intro.
@@ -48,7 +48,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  Ax[Happy(x) > Dog(x)
  Ax Happy(x)
-\argumentline
+++++++++++++++++++++++
  Ax Dog(x)
 \endargument
 \Hint This is the first time you have to use $A$ Intro.
@@ -67,7 +67,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  Ax[Dog(x) > Happy(x)]
  Ax[Happy(x) > -Tired(x)]
-\argumentline
+++++++++++++++++++++++++++
  Ax[Dog(x) > -Tired(x)]
 \endargument
         \answer
@@ -82,7 +82,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \problem{5}
 \argument
  AxAy*[[Dog(x) ^ Cat(y)] > Saw(x,y)*]
-\argumentline
+++++++++++++++++++++++++++++++++++++++
  Ax*[Cat(x) > Ay[Dog(y) > Saw(y,x)]*]
 \endargument
         \answer
@@ -96,7 +96,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \problem{6}
 \argument
  Ax Happy(x)
-\argumentline
++++++++++++++
  Ex Happy(x)
 \endargument
 \Hint You don't need a name in a box for $A$ Elim.
@@ -111,7 +111,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \problem{7}
 \argument
  AxAy Saw(x,y)
-\argumentline
++++++++++++++++
  AxEy Saw(x,y)
 \endargument
         \answer
@@ -126,7 +126,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 \argument
  Ax[Logician(x) > Happy(x)]
  -Ax Happy(x)
-\argumentline
+++++++++++++++++++++++++++++
  -Ax Logician(x)
 \endargument
         \answer

@@ -91,13 +91,13 @@ Construct full (not abbreviated) truth tables for the following arguments. For e
 \argument
  A > -B
  -[C ^ B]
-\argumentline
+++++++++++
  C > -A
 \endargument
         \answer
         \truthtable
          A | B | C : A. > .-.B | -.[.C. ^ .B.] | C. > .-.A
-        \truthtableline
+        +++++++++++++++++++++++++++++++++++++++++++++++++++
            |   |   :  .   . .  |  . . .   . .  |  .   . . 
         \endtruthtable
         Valid/Invalid?
@@ -107,13 +107,13 @@ Construct full (not abbreviated) truth tables for the following arguments. For e
 \argument
  -*[[A > B] ^ -A*]
  [-B v A] > B
-\argumentline
++++++++++++++++++++
  A > -[B v A]
 \endargument
         \answer
         \truthtable
          A | B : -.*[[.A. > .B.]. ^ .-.A.*] | [.-.B. v .A.]. > .B | A. > .-.[.B. v .A.]
-        \truthtableline
+        ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
            |   :  .   . .   . . .   . . .   |  . . .   . . .   .  |  .   . . . .   . 
         \endtruthtable
         Valid/Invalid?
@@ -135,14 +135,14 @@ c: State whether the argument is valid or invalid, given both the connectives an
 \argument
  -Shorter(ruth,alonzo)
  Shorter(ruth,kurt) > Shorter(ruth,alonzo)
-\argumentline
+++++++++++++++++++++++++++++++++++++++++++++++
  -[Shorter(alonzo,kurt) v Shorter(ruth,kurt)]
 \endargument
         \answerlist
         a:
         \truthtable
          -.S(r,a) | S(r,k). > .S(r,a) | -.[.S(a,k). v .S(r,k).]
-        \truthtableline
+        ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
           .       |       .   .       |  . .      .   .
         \endtruthtable
         Valid/Invalid?, given only the connectives.
@@ -165,13 +165,13 @@ For the following argument, use an abbreviated truth table to determine whether 
  A v [B > C]
  C > D
  [B > D] > E
-\argumentline
++++++++++++++
  -A > E
 \endargument
         \answer
         \truthtable
          A. v .[.B. > .C.] | C. > .D | [.B. > .D.]. > .E | -.A. > .E
-        \truthtableline
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
           .   . . .   . .  |  .   .  |  . .   . . .   .  |  . .   .
         \endtruthtable
         Valid/Invalid?
