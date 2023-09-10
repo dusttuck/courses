@@ -1,0 +1,93 @@
+\input logicdocument
+\title{Phil 210 - Quiz 2}
+
+\heading
+Quiz 3
+Your Name
+Introduction to Formal Logic
+\endheading
+
+Use a full or abbreviated truth table (your choice) to determine whether the following arguments are valid or invalid and state your answer.
+
+\problems
+\problem{1} (40 points.)
+\argument
+ A v B
+ B v -A
+++++++++++
+ -A
+\endargument
+        \answer
+        \truthtable
+         A | B : A. v .B | B. v .-.A | -.A
+        +++++++++++++++++++++++++++++++++++
+           |   :  .   .  |  .   . .  |  . 
+        \endtruthtable
+        Valid/Invalid?
+        \endanswer
+
+\problem{2} (30 points.)
+\argument
+ A ^ B
+ -[C ^ B]
+++++++++++
+ -C v -A
+\endargument
+        \answer
+        \truthtable
+         A | B | C : A. ^ .B | -.[.C. ^ .B.] | -.C. v .-.A
+        +++++++++++++++++++++++++++++++++++++++++++++++++++
+           |   |   :  .   .  |  .[. .   . .] |  . .   . . 
+        \endtruthtable
+        Valid/Invalid?
+        \endanswer
+
+\endproblems
+
+Attempt to build countermodels for the following arguments to determine whether they're valid or invalid, given both the connectives predicates, then state your answer (and give the countermodel if possibe). You may again use whichever sort of truth table you want.
+
+\problems
+\problem{3} (20 points.)
+\argument
+ Shorter(alonzo,ruth) v Shorter(ruth,kurt)
+ -[Shorter(alonzo,kurt) ^ Shorter(ruth,kurt)]
+\argumentline
+ -Shorter(alonzo,kurt)
+\endargument
+        \answer
+        \truthtable
+         S(a,r) | S(r,k) | S(a,k) : S(a,r). v .S(r,k) | -.[.S(a,k). ^ .S(r,k).] | -.S(a,k)
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                |        |        :       .   .       |  .[.      .   .      .] |  .   
+        \endtruthtable
+
+        \heightmodel
+        
+        \endheightmodel
+        \OR
+        No countermodel is possible, so it's valid, given the connectives and predicates.
+        \endanswer
+
+\problem{4} (10 points.)
+\argument
+ Shorter(ruth,kurt) v Shorter(ruth,alonzo)
+ -[Shorter(alonzo,kurt) ^ Shorter(ruth,kurt)] v Shorter(ruth,alonzo)
+\argumentline
+ Shorter(ruth,kurt) v -Shorter(alonzo,kurt)
+\endargument
+        \answer\truthtableinteritemspace1.5pt
+        \truthtable
+         S(r,k) | S(r,a) | S(a,k) : S(r,k). v .S(r,a) | .-.[.S(a,k). ^ .S(r,k).]. v .S(r,a) | S(r,k). v .-.S(a,k)
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                |        |        :       .   .       | . .[.      .   .      .].   .       |       .   . .   
+        \endtruthtable
+
+        \heightmodel
+        
+        \endheightmodel
+        \OR
+        No countermodel is possible, so it's valid, given the connectives and predicates.
+        \endanswer
+
+\endproblems
+\bye
