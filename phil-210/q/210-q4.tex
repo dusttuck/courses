@@ -1,0 +1,91 @@
+\input logicdocument
+\title{Phil 210 - Quiz 4}
+
+\heading
+Quiz 4
+Your Name
+Introduction to Formal Logic
+\endheading
+
+Translate the following English sentences into the language of first-order logic.
+
+\problems
+\problem{1} (25 points.)
+If Alonzo is a logician then so is Ruth.
+        \answer
+        $ $
+        \endanswer
+
+\problem{2} (20 points.)
+If Ruth is not working, then she's happy.
+        \answer
+        $ $
+        \endanswer
+
+\problem{3} (15 points.)
+Ruth is happy only if Alonzo is working.
+        \answer
+        $ $
+        \endanswer
+
+\problem{4} (10 points.)
+Ruth is not happy if she and Alonzo are both working.
+        \answer
+        $ $
+        \endanswer
+
+\problem{5} (5 points.)
+Alonzo isn't happy unless he's working or tired.
+        \answer
+        $ $
+        \endanswer
+
+\endproblems
+
+Use a full or abbreviated truth table (your choice) to determine whether the following argument is valid or invalid and state your answer.
+
+\problems
+\problem{7} (15 points.)
+\argument
+ -A > C
+ [A ^ B] > [C v -A]
+\argumentline
+ -B v A
+\endargument
+        \answer
+        \truthtable
+         A | B | C : -.A. > .C | [.A. ^ .B.]. > .[.C. v .-.A.] | -.B. v .A
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+           |   |   :  . .   .  | [. .   . .].   .[. .   . . .] |  . .   .
+        \endtruthtable
+        Valid/Invalid?
+        \endanswer
+
+\endproblems
+
+Attempt to build a countermodel for the following argument to determine whether it's valid or invalid, given both the connectives predicates, then state your answer (and give the countermodel if possibe). You may again use whichever sort of truth table you want.
+
+\problems
+\problem{8} (10 points.)
+\argument
+ Shorter(alonzo,ruth) v Shorter(ruth,kurt)
+ -[Shorter(alonzo,kurt) ^ Shorter(ruth,kurt)]
+\argumentline
+ -Shorter(alonzo,kurt)
+\endargument
+        \answer
+        \truthtable
+         S(a,r) | S(r,k) | S(a,k) : S(a,r). v .S(r,k) | -.[.S(a,k). ^ .S(r,k).] | -.S(a,k)
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                |        |        :       .   .       |  .[.      .   .      .] |  .
+        \endtruthtable
+
+        \heightmodel
+         
+        \endheightmodel
+        \OR
+        No countermodel is possible, so it's valid, given the connectives and predicates.
+        \endanswer
+
+\endproblems
+\bye
