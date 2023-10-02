@@ -1,0 +1,80 @@
+\input logicdocument
+\title{Phil 210 - Quiz 6}
+
+\heading
+Quiz 6
+Your Name
+Introduction to Formal Logic
+\endheading
+
+For each of the following valid arguments, complete a Fitch-style natural deduction to prove its validity. Do this by filling in the missing lines, citations, or both.
+
+\problems
+\problem{1} (40 points.)
+\argument
+ A < B
+ C ^ B
++++++++
+ A ^ C
+\endargument
+        \answer
+        \fitchproof
+         1. | A < B
+         2. | C ^ B  ..  Goal: A ^ C
+            |---
+         3. | 
+        \endfitchproof
+        \endanswer
+
+\problem{2} (30 points.)
+\argument
+ R(a) < S(a)
+ P(a) ^ b=a
+ P(b) > S(b)
++++++++
+ R(a)
+\endargument
+        \answer
+        \fitchproof
+         1. | R(a) < S(a)
+         2. | P(a) ^ b=a
+         3. | R(b) > S(b)  ..  Goal: R(a)
+            |---
+         4. | 
+        \endfitchproof
+        \endanswer
+
+\problem{3} (20 points.)
+\argument
+ B > [C > D]
+ D > F
++++++++++++++++++++
+ B > [C > F]
+\endargument
+        \answer
+        \fitchproof
+         1. | B > [C > D]
+         2. | D > F        ..  Goal: B > [C > F]
+            |---
+         3. | 
+        \endfitchproof
+        \endanswer
+
+\problem{4} (10 points.)
+\argument
+ P(a) > Q(a)
+ Q(b) ^ P(c)
++++++++++++++++++++
+ a=c > Q(c)
+\endargument
+        \answer
+        \fitchproof
+         1. | P(a) > Q(a)
+         2. | Q(b) ^ P(c)  ..  Goal: a=c > Q(c)
+            |---
+         2. | 
+        \endfitchproof
+        \endanswer
+
+\endproblems
+\bye
