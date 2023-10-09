@@ -1,0 +1,89 @@
+\input logicdocument
+\title{Phil 210 - Quiz 7}
+
+\heading
+Quiz 7
+Your Name
+Introduction to Formal Logic
+\endheading
+
+For each of the following valid arguments, complete a Fitch-style natural deduction to prove its validity. Do this by filling in the missing lines, citations, or both.
+
+\problems
+\problem{1} (40 points.)
+\argument
+ B ^ C
+ [B v D] > F
++++++++
+ F ^ C
+\endargument
+        \answer
+        \fitchproof
+         1. | B ^ C
+         2. | [B v D] > F  ..  Goal: F ^ C
+            |---
+         3. | 
+        \endfitchproof
+        \endanswer
+
+\problem{2} (30 points.)
+\argument
+ A v [B ^ C]
+ A > C
++++++++++++++++++++
+ C
+\endargument
+        \answer
+        \fitchproof
+         1. | A v [B ^ C]
+         2. | A > C        ..  Goal: C
+            |---
+         3. |   | A        ..  Setting up: v Elim: 1  .  Goal: C
+            |   |---
+            |   | 
+            |   + 
+            |   + 
+            |   | B ^ C    ..  Setting up: v Elim: 1  .  Goal: C
+            |   |---
+            |   |
+            |   +
+            | 
+        \endfitchproof
+        \endanswer
+
+\problem{3} (20 points.)
+\argument
+ A > B
+ [B ^ C] > D
++++++++
+ [A ^ C] > [D v E]
+\endargument
+        \answer
+        \fitchproof
+         1. | A > B
+         2. | [B ^ C] > D  ..  Goal: [A ^ C] > [D v E]
+            |---
+         3. | 
+        \endfitchproof
+        \endanswer
+
+\problem{4} (10 points.)
+\argument
+ A v B
+ [A ^ C] > E
+ [B ^ D] > E
++++++++++++++++++++
+ [C ^ D] > E
+\endargument
+        \answer
+        \fitchproof
+         1. | A v B
+         2. | [A ^ C] > E
+         3. | [B ^ D] > E  ..  Goal: [C ^ D] > E
+            |---
+         4. | 
+        \endfitchproof
+        \endanswer
+
+\endproblems
+\bye
