@@ -1,0 +1,82 @@
+\input logicdocument
+\title{Phil 210 - Quiz 8}
+
+\heading
+Quiz 8
+Your Name
+Introduction to Formal Logic
+\endheading
+
+For each of the following valid arguments, complete a Fitch-style natural deduction to prove its validity. Do this by filling in the missing lines, citations, or both.
+
+\problems
+\problem{1} (40 points.)
+\argument
+ A > -B
+ C > [D ^ A]
++++++++
+ -[B ^ C]
+\endargument
+        \answer
+        \fitchproof
+         1. | A > -B
+         2. | C > [D ^ A]  ..  Goal: -[B ^ C]
+            |---
+         3. |   | B ^ C    ..  Setting up: - Intro  .  Goal: ! 
+            |   |---
+         4. |   | 
+        \endfitchproof
+        \endanswer
+
+\problem{2} (30 points.)
+\argument
+ [B ^ C] > D
+ B > [C ^ -D]
++++++++++++++++++++
+ -B
+\endargument
+        \answer
+        \fitchproof
+         1. | [B ^ C] > D
+         2. | B > [C ^ -D]  ..  Goal: -B
+            |---
+         3. |
+        \endfitchproof
+        \endanswer
+
+\problem{3} (20 points.)
+\argument
+ A > [B ^ C]
+ C > [D > -B]
++++++++
+ A > -D
+\endargument
+        \answer
+        \fitchproof
+         1. | A > [B ^ C]
+         2. | C > [D > -B]  ..  Goal: A > -D
+            |---
+         3. | 
+        \endfitchproof
+        \endanswer
+
+\problem{4} (10 points.)
+\argument
+ [A ^ B] v -C
+ D > C
+ B > -E
++++++++++++++++++++
+ -[D ^ E]
+\endargument
+        \answer
+        \fitchproof
+         1. | [A ^ B] v -C
+         2. | D > C
+         3. | B > -E        ..  Goal: -[D ^ E]
+            |---
+         4. | 
+        \endfitchproof
+        \endanswer
+
+\endproblems
+\bye
