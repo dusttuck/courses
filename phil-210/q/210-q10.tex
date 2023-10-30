@@ -1,0 +1,78 @@
+\input logicdocument
+\title{Phil 210 - Quiz 10}
+
+\heading
+Quiz 10
+Your Name
+Introduction to Formal Logic
+\endheading
+
+Begin with this model:
+
+\answer
+        \firstordermodel 
+        Domain: a, b, c, d
+
+        Dog:    b, d
+        Happy:  a, b, c
+        Saw:    <a, a>, <a, b>, <a, c>
+           .    <b, b>, <b, c>
+           .    <c, a>, <c, c>
+           .    <d, a>, <d, b>, <d, d>
+        \endfirstordermodel
+\endanswer\bigskip
+
+For each of the following sentences, state whether it's true or false.
+
+\quantifiers
+\problems
+\problem{1} (20 points.)
+$ Dog(a) $
+        \answer
+         T / F
+        \endanswer
+
+\problem{2} (20 points.)
+$ Happy(a) $
+        \answer
+         T / F
+        \endanswer
+
+\problem{3} (15 points.)
+$ Ex[Dog(x) ^ Happy(x)]$
+        \answer
+         T / F
+        \endanswer
+
+\problem{4} (15 points.)
+$ Ax[Dog(x) > Happy(x)] $
+        \answer
+         T / F
+        \endanswer
+
+\problem{5} (10 points.)
+$ Ax[Saw(c,x) > Happy(x)] $
+        \answer
+         T / F
+        \endanswer
+
+\problem{6} (10 points.)
+$ Ex[Dog(x) ^ - Saw(x,d)] $
+        \answer
+         T / F
+        \endanswer
+
+\problem{7} (5 points.)
+$ Ax*[Happy(x) > Ey[Dog(y) ^ Saw(x,y)]*] $
+        \answer
+         T / F
+        \endanswer
+
+\problem{8} (5 points.)
+$ ExAy[Dog(y) > Saw(x,y)] $
+        \answer
+         T / F
+        \endanswer
+
+\endproblems
+\bye
