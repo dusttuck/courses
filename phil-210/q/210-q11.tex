@@ -1,0 +1,92 @@
+\input logicdocument
+
+\heading
+Quiz 11
+Your Name
+Introduction to Formal Logic
+\endheading
+
+Begin with this model:
+
+\answer
+        \firstordermodel 
+        Domain: a, b, c, d
+
+        Happy:  a, b, d
+        Saw:    <a, a>, <a, b>,
+           .    <b, a>,
+           .    <c, c>, <c, d>
+        \endfirstordermodel
+\endanswer\bigskip
+
+For each of the following sentences, provide two extensions for the new predicate, one that makes the sentence true and one that makes it false. Don't change any of the existing extensions!
+
+\quantifiers
+\problems
+\problem{1} (15 points.)
+$ Ex[Happy(x) ^ Dog(x) ^ Saw(c,x)] $
+        \answer
+        True: $Dog$: 
+        False: $Dog$: 
+        \endanswer
+
+\problem{2} (15 points.)
+$ Ax[Saw(x,a) > Dog(x)] $
+        \answer
+        True: $Dog$: 
+        False: $Dog$: 
+        \endanswer
+
+\problem{3} (10 points.)
+$ AxAy[Saw(x,y) > Heard(x,y)] $
+        \answer\makefomodelangles
+        True: $Heard$: 
+        False: $Heard$: 
+        \endanswer
+
+\problem{4} (10 points.)
+$ Ax[Ey Saw(y,x) > Dog(x)] $
+        \answer
+        True: $Dog$: 
+        False: $Dog$: 
+        \endanswer
+
+\endproblems
+
+Give a countermodel for each of the following arguments. They're both invalid.
+
+\problems
+\problem{5} (30 points.)
+\argument
+ Ax[Dog(x) > Happy(x)]
+ Ex Happy(x)
+++++++++++++++++++++++++++
+ Ex Dog(x)
+\endargument
+        \answer
+        \firstordermodel
+        Domain: 
+
+        Dog:    
+        Happy:  
+        \endfirstordermodel
+        \endanswer
+
+\problem{6} (20 points.)
+\argument
+ Ax[Ey Saw(x,y) > Happy(x)]
+ Ex Ey Saw(x,y)
++++++++++++++++++++++++
+ Ax Happy(x)
+\endargument
+        \answer
+        \firstordermodel
+        Domain: 
+
+        Happy:    
+        Saw:  
+        \endfirstordermodel
+        \endanswer
+
+\endproblems
+\bye
