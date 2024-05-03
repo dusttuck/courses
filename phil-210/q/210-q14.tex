@@ -1,0 +1,79 @@
+\input logicdocument
+\title{Phil 210 - Quiz 14}
+
+\heading
+Quiz 14
+Your Name
+Introduction to Formal Logic
+\endheading
+
+For each of the following valid arguments, complete a Fitch-style natural deduction to prove its validity.
+
+\quantifiers
+\problems
+\problem{1} (40 points.)
+\argument
+ Ax[Happy(x) > Dog(x)]
+ Ax[Happy(x) ^ Barks(x)]
++++++++++++++++++++++++++
+ Ax[Dog(x) ^ Barks(x)]
+\endargument
+        \answer
+        \fitchproof
+         1. | Ax[H(x) > D(x)]
+         2. | Ax[H(x) ^ B(s)]  ..  Goal: Ax[D(x) ^ B(x)]
+            |---
+         3. | 
+        \endfitchproof
+        \endanswer
+
+\problem{2} (30 points.)
+\argument
+ Ax[Saw(x,ruth) > Logician(x)]
+ Ax[Logician(x) > Happy(x)]
++++++++++++++++++++++++++++++++
+ Ax[Saw(x,ruth) > Happy(x)]
+\endargument
+        \answer
+        \fitchproof
+         1. | Ax[S(x,r) > L(x)]
+         2. | Ax[L(x) > H(x)]        ..  Goal: Ax[S(x,r) > H(x)]
+            |---
+         3. | 
+        \endfitchproof
+        \endanswer
+
+\problem{3} (20 points.)
+\argument
+ Ax[Happy(x) v Sad(x)]
+ Ax[Happy(x) > Dog(x)]
++++++++++++++++++++++++
+ Ax[Dog(x) v Sad(x)]
+\endargument
+        \answer
+        \fitchproof
+         1. | Ax[H(x) v S(x)]
+         2. | Ax[H(x) > D(x)]      ..  Goal: Ax[D(x) v S(x)]
+            |---
+         3. | 
+        \endfitchproof
+        \endanswer
+
+\problem{4} (10 points.)
+\argument
+ Ax[Happy(x) > Ay -Saw(x,y)]
+ ExEy Saw(x,y)
++++++++++++++++++++++++++++++
+ Ex -Happy(x)
+\endargument
+        \answer
+        \fitchproof
+         1. | Ax[H(x) > Ay -S(x,y)]
+         2. | ExEy S(x,y)                    ..  Goal: Ex -H(x)
+            |---
+         3. | 
+        \endfitchproof
+        \endanswer
+
+\endproblems
+\bye
