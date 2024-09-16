@@ -1,0 +1,139 @@
+\input 411
+\title{Phil 411 - Problem Set 1}
+
+\heading
+Problem Set 1
+Your Name
+Phil 411: Type Theory
+\endheading
+
+For each of the following strings of symbols, state whether it is or is not a term. Use our syntactic convenience of writing $(Lx.A)$ without the outermost parentheses in $A$, but do not omit any other parentheses.
+
+\problems
+\problem{Examples}
+$ (Lv.v'v) $
+        \answer
+        Term
+        \endanswer
+
+\problem{\gobble}
+$ Lv.v'v $
+        \answer
+        Not a term
+        \endanswer
+
+\problem{1}
+$ (vv) $
+        \answer
+        Term / Not a term
+        \endanswer
+
+\problem{2}
+$ (v'v)v $
+        \answer
+        Term / Not a term
+        \endanswer
+
+\problem{3}
+$ (Lv.v) $
+        \answer
+        Term / Not a term
+        \endanswer
+
+\problem{4}
+$ (Lv.v'v') $
+        \answer
+        Term / Not a term
+        \endanswer
+
+\problem{5}
+$ (Lv.vv'v') $
+
+        \answer
+        Term / Not a term
+        \endanswer
+
+\problem{6}
+$ (Lv.v(v'v')) $
+        \answer
+        Term / Not a term
+        \endanswer
+
+\endproblems
+
+In the following strings of symbols, identify the free variables by putting a @*@ in front of them (which makes them turn green). You can edit the terms in place; you don't need to copy them or anything.
+
+\problems
+\problem{Example}
+$ (v(Lv.vv')) $
+
+\negskip
+\problem{Answer:\gobble}
+$ (*v(Lv.v*v')) $
+
+\problem{7}
+$ (Lv'.v'v) $
+
+\problem{8}
+$ ((vv')(Lv.v'v)) $
+
+\problem{9}
+$ ((Lv.vv')v) $
+
+\endproblems
+
+Complete the following substitutions. I now omit outermost parentheses.
+
+\problems
+\problem{Example}
+$ v(Lv.vv')[(v'v')/v] $
+
+	\answer
+	$ (v'v')(Lv.(v'v')v') $
+	\endanswer
+
+\problem{10}
+$ v'v[v'/v] $
+
+	\answer
+	$ $
+	\endanswer
+
+\problem{11}
+$ v'v[(Lv.vv)/v'] $
+
+	\answer
+	$ $
+	\endanswer
+
+\problem{12}
+$ (v'v)(Lv'.v'v)[(Lv.vv)/v'] $
+
+	\answer
+	$ $
+	\endanswer
+
+\endproblems
+
+
+\pagebreak
+
+
+$ b$-reduce the following terms until you cannot perform any more $ b$-conversions. You don't need to provide the intermediate steps, but I include them in the example for illustration.
+
+\problems
+\problem{Example}
+$ (Lv'.(Lv.v'v)(v''v''))(v''') $
+
+	\answer
+	$ v'''(v''v''') $
+	\endanswer
+
+\bigskip
+There are two chains of $ b$-conversions that can reach this term:\medskip
+$ (*{Lv'.}(Lv.*v'v)(v''*v'))*{(v''')} $  \cvs  $ (Lv.*{v'''}v)(v''v''') $  \cvs  $ v'''(v''v''') $
+
+$ (Lv'.(*{Lv.}v'*v)*{(v''v')})(v''') $  \cvs  $ (Lv'.v'*{(v''v')})(v''') $  \cvs  $ v'''(v''v''') $
+
+\endproblems
+\bye
