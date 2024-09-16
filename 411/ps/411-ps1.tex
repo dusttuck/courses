@@ -61,6 +61,8 @@ $ (Lv.v(v'v')) $
 
 \endproblems
 
+\pagebreak
+
 In the following strings of symbols, identify the free variables by putting a @*@ in front of them (which makes them turn green). You can edit the terms in place; you don't need to copy them or anything.
 
 \problems
@@ -82,14 +84,14 @@ $ ((Lv.vv')v) $
 
 \endproblems
 
-Complete the following substitutions. I now omit outermost parentheses.
+Complete the following substitutions. We now omit outermost parentheses.
 
 \problems
 \problem{Example}
 $ v(Lv.vv')[(v'v')/v] $
 
 	\answer
-	$ (v'v')(Lv.(v'v')v') $
+	$ (v'v')(Lv.vv') $
 	\endanswer
 
 \problem{10}
@@ -115,25 +117,45 @@ $ (v'v)(Lv'.v'v)[(Lv.vv)/v'] $
 
 \endproblems
 
-
+{\it One more page!}
 \pagebreak
-
 
 $ b$-reduce the following terms until you cannot perform any more $ b$-conversions. You don't need to provide the intermediate steps, but I include them in the example for illustration.
 
 \problems
 \problem{Example}
-$ (Lv'.(Lv.v'v)(v''v''))(v''') $
+$ (Lv'.(Lv.v'v)(v''v'))(v''') $
 
 	\answer
 	$ v'''(v''v''') $
 	\endanswer
 
 \bigskip
-There are two chains of $ b$-conversions that can reach this term:\medskip
-$ (*{Lv'.}(Lv.*v'v)(v''*v'))*{(v''')} $  \cvs  $ (Lv.*{v'''}v)(v''v''') $  \cvs  $ v'''(v''v''') $
+There are two chains of $ b$-conversions that end with this term:\medskip
+$ (*{Lv'.}(Lv.*v'v)(v''*v'))*{(v''')} $  \cvs  $ (Lv.*{v'''}v)(v''*{v'''}) $  \cvs  $ v'''(v''v''') $
 
 $ (Lv'.(*{Lv.}v'*v)*{(v''v')})(v''') $  \cvs  $ (Lv'.v'*{(v''v')})(v''') $  \cvs  $ v'''(v''v''') $
+
+\problem{13}
+$ (Lv.v'v)v'' $
+
+	\answer
+	$ $
+	\endanswer
+
+\problem{14}
+$ v(Lv.v'v)(vv) $
+
+	\answer
+	$ $
+	\endanswer
+
+\problem{15}
+$ (Lv'.(Lv.v'v)v'')(v'''v''') $
+
+	\answer
+	$ $
+	\endanswer
 
 \endproblems
 \bye
