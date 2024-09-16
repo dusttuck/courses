@@ -1,0 +1,272 @@
+\input eplain % This is included for verbatim, hyperlinks, and packages.
+\beginpackages
+\usepackage{color}
+\endpackages
+
+
+% ---------------
+% General utility
+% ---------------
+
+%  Make @text@ be \verbatim text|endverbatim.
+\def\at{@}
+\catcode`\@=\active
+\def@{\bgroup%
+	\ifx\resetasterisk\undefined \else\resetasterisk \fi%
+	\catcode`\^=\active%
+	\def@{\endverbatim\egroup}%
+	\verbatim\makecaretbetter%
+}
+
+
+%  Make the verbatim caret better.
+\input rotate
+\begingroup
+\catcode`\^=\active
+\gdef\makecaretbetter{%
+	\catcode`\^=\active%
+	\def^{{\setbox0=\hbox{\tt>}\rotl0\box0}}%
+}
+\endgroup
+
+
+%  URLs
+\enablehyperlinks[dvipdfm]
+\hlopts{bwidth=0}
+\def\url#1{\hlstart{url}{}{#1}\tt#1\hlend}
+
+
+\def\ensuremath#1{\relax\ifmmode#1\else$#1$\fi}%  Ensure math mode
+\def\ensureline{\hskip0pt}%  Make sure that the line has begun
+\def\mystrut#1#2{\vrule height#1 depth#2 width0pt}%  Custom struts
+\def\makereturnsspaces{\catcode`\^^M=10\relax}
+
+
+% -------------
+% Abbreviations
+% -------------
+
+\catcode`\>=12%      make > other
+\mathcode`\>="3221%  \rightarrow
+\catcode`\|=12
+\mathcode`\|="3260%  \vdash
+\catcode`\!=12
+\mathcode`\!="023F%  \bot
+\catcode`\-=12%
+\mathcode`\-="023A%  \lnot
+\catcode`\?=12
+\mathcode`\?="020F%  \bullet, but \mathord
+\mathcode`\U="7255%  change family to 2
+\mathcode`\P="7005%  \Pi
+\mathcode`\L="0115%  \lambda
+\mathcode`\G="7000%  \Gamma
+\mathcode`\Y="7A59%  change family to A (10 - cmss)
+
+\def\To{\qquad\ensuremath{=\!=\!\Rightarrow}\qquad}
+\def\cv{\ensuremath{{}>_\beta{}}}
+\def\rd{\ensuremath{\mathrel{\rlap{$>$}\,\mathord>_\beta{}}}}
+\def\eq{\ensuremath{{}=_\beta{}}}
+\def\cvs{\quad\cv\quad}
+
+
+% ------
+% Colors
+% ------
+
+\definecolor{red}{RGB}{255,77,92}
+\definecolor{hlred}{RGB}{255,165,173}
+\definecolor{darkred}{RGB}{200,49,62}
+\definecolor{green}{RGB}{146,208,80}
+\definecolor{hlgreen}{RGB}{200,231,167}
+\definecolor{darkgreen}{RGB}{114,180,52}
+\definecolor{blue}{RGB}{0,176,240}
+\definecolor{hlblue}{RGB}{127,215,247}
+\definecolor{darkblue}{RGB}{0,114,188}
+\definecolor{gray}{RGB}{210,210,210}
+\definecolor{hlgray}{RGB}{245,245,245}
+\definecolor{darkgray}{RGB}{160,160,160}
+
+
+% -----------
+% Math colors
+% -----------
+
+\def\red{\color{red}}
+\def\green{\color{green}}
+\def\blue{\color{blue}}
+\let\mlue\blue
+\def\black{\color{black}}
+\let\mlack\black
+\def\gray{\color{gray}}
+\def\darkgray{\color{darkgray}}
+
+%  This is a lazy hack and only works for a single prime following the variable
+\def\makecolor#1#2#3{\bgroup#1#2%
+	\if#3'%
+		#3\egroup%
+	\else%
+		\egroup\expandafter#3%  \expandafter so that the second * in *v*v doesn't get eaten
+	\fi}
+
+\let\starcolor\green
+\let\mathcolor\blue
+\let\slashcolor\darkgray
+
+\begingroup
+\catcode`\b=\active
+\catcode`\[=\active
+\catcode`\]=\active
+\catcode`\/=\active
+\catcode`\*=\active
+\gdef\mathcolors{%
+	\mathcolor%
+	\catcode`\b=\active%
+	\def b{{\mlack\mathchar"010C}}% \beta
+	\catcode`\[=\active%
+	\catcode`\]=\active%
+	\catcode`\/=\active%
+	\catcode`\*=\active%
+	\def[{{\slashcolor\mathchar"405B}}%
+	\def]{{\slashcolor\mathchar"505D}}%
+	\def/{{\slashcolor\mathchar"013D}}%
+	\def*{\makecolor{\starcolor}}%
+}
+\endgroup
+
+\everymath{\mathcolors\relax}
+
+
+% ------
+% Breaks
+% ------
+
+\def\pagebreak{\vfill\eject}
+\def\linebreak{\hfill\break}
+
+
+% -----
+% Skips
+% -----
+
+\def\negskip{\vskip-10pt}
+\def\medskip{\vskip5pt}
+\def\bigskip{\vskip10pt}
+\def\Bigskip{\vskip15pt}
+\def\biggskip{\vskip20pt}
+\def\Biggskip{\vskip30pt}
+
+
+% ----------------------
+% Mimicry of article.cls
+% ----------------------
+
+%\font\headingtitlefonts=cmr10 scaled \magstep3
+\def\headingfonts{%
+	\font\rm=cmr10 scaled \magstephalf%
+	\font\tt=cmtt10 scaled \magstephalf%
+	\rm%
+}
+\def\headingtitlefonts{%
+	\font\rm=cmr10 scaled \magstep3%
+	\font\tt=cmtt10 scaled \magstep3%
+	\font\cmsy=cmsy10 scaled \magstep3%
+	\textfont0=\rm%
+	\textfont2=\cmsy%
+	\rm%
+}
+
+\newif\ifheadingfirstrow
+\def\headingrow{\ifheadingfirstrow\headingtitlefonts\mystrut{0pt}{18.5pt}\fi}
+% 18.5pt = Bigskip + 3.5pt
+
+\def\headinghalign{
+	\headingfirstrowtrue
+	\headingfonts
+	\def\par{\crcr}
+	\halign\bgroup
+		\obeylines%
+		\headingrow%
+		\hfil##\hfil%
+		\global\headingfirstrowfalse%
+		\cr%
+}
+
+\newdimen\headingheight
+\setbox0\vbox{
+	\headinghalign
+		\strut
+		\strut
+		\strut
+	\egroup
+	\biggskip
+}
+\headingheight=\ht0
+
+\def\heading{\ensureline\hfil\vbox to\headingheight\bgroup\headinghalign}
+\def\endheading{\par\egroup\vss\egroup}
+
+
+% ------------
+% Problem sets
+% ------------
+
+\let\problemfont=\bf
+\let\problemspace=\quad
+\def\problemprint#1{{\problemfont#1.\problemspace}}
+
+\newdimen\problemindent
+\def\setproblemindent#1{%
+	\setbox0\hbox{\problemprint{#1}}%
+	\problemindent=\wd0%
+}
+\setproblemindent{00}
+
+\def\problems{\nobreak\par\bgroup%
+	\let\mathcolor\black%
+	\let\slashcolor\blue%
+	\advance\leftskip by\problemindent%
+	\def\Hint{\qquad{\bf Hint: }}
+	\def\points##1{\hskip1.5em(##1\ points)}
+}
+\def\endproblems{\egroup\Biggskip}
+
+\def\problem#1{\biggskip\noindent\llap{\problemprint{#1}}\ignorespaces}
+
+
+% -------
+% Answers
+% -------
+
+\font\tensc=cmcsc10
+
+\newdimen\answerindent \answerindent=2em
+
+\def\answercore{\par\nobreak\bigskip\bgroup
+	\parindent=0pt
+	\def\OR{\hskip2\answerindent{\tensc or}\hskip2\answerindent}
+	\def\ORs{\hskip1.25\answerindent{\tensc or}\hskip1.25\answerindent}
+	\advance\leftskip by\answerindent
+	\obeylines
+}
+\def\answer{
+	\answercore
+}
+\def\endanswer{\par\egroup}
+\def\alternativeanswer{\endanswer\answer}
+
+
+% -------------
+% File settings
+% -------------
+
+\magnification\magstephalf
+\raggedbottom
+\overfullrule=0pt
+\parindent=0pt
+\interlinepenalty=10000
+
+
+% These settings are specifically for Overleaf:
+\special{papersize=8.5in,11in}
+\def\title#1{}
+\def\fitchproofneg{\fitchproofindentby{-4\fitchspace}}
