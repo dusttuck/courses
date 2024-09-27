@@ -10,7 +10,7 @@ Introduction to Formal Logic
 For each of the following valid arguments, complete a Fitch-style natural deduction to prove its validity. Do this by filling in the missing lines, citations, or both.
 
 \problems
-\problem{1} (40 points.)
+\problem{1} (50 points.)
 \argument
  A ^ B
  A > C
@@ -28,7 +28,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
         \endfitchproof
         \endanswer
 
-\problem{2} (30 points.)
+\problem{2} (25 points.)
 \argument
  A ^ B
  A > C
@@ -46,35 +46,21 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
         \endfitchproof
         \endanswer
 
-\problem{3} (20 points.)
+\problem{3} (25 points.)
 \argument
- A > B
- [B ^ C] > D
+ [A > B] ^ [C > D]
+ A ^ C
+ B > E
 +++++++++++++
- [A ^ C] > D
+ D ^ E
 \endargument
         \answer
         \fitchproof
-         1. | A > B
-         2. | [B ^ C] > D  ..  Goal: [A ^ C] > D
+         1. | [A > B] ^ [C > D]
+         2. | A ^ C
+         3. | B > E              ..  Goal: D ^ E
             |---
-         3. |   | A ^ C    ..  Assumption  .  Setting up: > Intro  .  Goal: D
-            |   |---
-         4. |   | 
-        \endfitchproof
-        \endanswer
-
-\problem{4} (10 points.)
-\argument
-
-+++++++++++++
- [A ^ B] > B
-\endargument
-        \answer
-        \fitchproof
-         1. |              ..  Goal: [A ^ B] > B
-            |---
-         2. | 
+         4. |
         \endfitchproof
         \endanswer
 
