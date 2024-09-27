@@ -54,6 +54,57 @@ Note: This is only one of multiple options for line 5.
 
 \problem{3}
 \argument
+ A > B
+ C > D
+ E > C
++++++++++++++++++++
+ [A ^ E] > [B ^ D]
+\endargument
+        \answer
+        \fitchproofneg
+         1. | A > B
+         2. | C > D
+         3. | E > C      ..  Goal: [A ^ E] > [B ^ D]
+            |---
+         4. |   | A ^ E  ..  Assumption  .  Setting up: > Intro  .  Goal: B ^ D
+            |   |---
+         5. |   | 
+         6. |   | 
+         7. |   | 
+         8. |   | 
+         9. |   | 
+         10.|   | B ^ D   .  
+            |   +
+         11.| [A ^ E] > [B ^ D]  .  > Intro: 4-10
+        \endfitchproof
+        \endanswer
+
+\problem{4}
+\argument
+ A > B
+ B > C
++++++++++++++++++++
+ [A ^ D] > [C ^ D]
+\endargument
+        \answer
+        \fitchproofneg
+         1. | A > B
+         2. | B > C      ..  Goal: [A ^ D] > [C ^ D]
+            |---
+         3. |   |        ..  Assumption  .  Setting up: > Intro  .  Goal: 
+            |   |---
+         4. |   | 
+         5. |   | 
+         6. |   | 
+         7. |   | 
+         8. |   | 
+            |   +
+         9. |            .  > Intro: 3-8
+        \endfitchproof
+        \endanswer
+
+\problem{5}
+\argument
  [F(a) ^ F(b)] > -G(a)
  F(b) ^ F(c)
 +++++++++++++++++++++++
@@ -68,7 +119,7 @@ Note: This is only one of multiple options for line 5.
         \endfitchproof
         \endanswer
 
-\problem{4}
+\problem{6}
 \argument
  A > [C ^ D]
  D > [A ^ B]
@@ -93,7 +144,25 @@ Note: This is only one of multiple options for line 5.
         \endfitchproof
         \endanswer
 
-\problem{5}
+\problem{7}
+\argument
+
+++++++++++++++++++++++++++++
+ [A > B] > *[[A ^ -C] > B*]
+\endargument
+        \answer
+        \fitchproof
+         1. |                 ..  Goal: [A > B] > *[[A ^ -C] > B*]
+            |---
+         2. |   | A > B       ..  Setting up: > Intro  .  Goal: [A ^ -C] > B
+            |   |---
+         3. |   |   | A ^ -C  ..  Setting up: > Intro  .  Goal: B
+            |   |   |---
+         4. |   |   | 
+        \endfitchproof
+        \endanswer
+
+\problem{8}
 \argument
 
 +++++++++++++++++++++++++++++++++++
@@ -109,7 +178,7 @@ Note: This is only one of multiple options for line 5.
         \endfitchproof
         \endanswer
 
-\problem{6}
+\problem{9}
 \argument
  [A ^ E] > F
  [C ^ D] > B
