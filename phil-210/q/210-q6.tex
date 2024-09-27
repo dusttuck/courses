@@ -28,6 +28,24 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
 
 \problem{2} (30 points.)
 \argument
+ A > B
+ [B ^ C] > D
++++++++++++++
+ [A ^ C] > D
+\endargument
+        \answer
+        \fitchproof
+         1. | A > B
+         2. | [B ^ C] > D  ..  Goal: [A ^ C] > D
+            |---
+         3. |   | A ^ C    ..  Assumption  .  Setting up: > Intro  .  Goal: D
+            |   |---
+         4. |   | 
+        \endfitchproof
+        \endanswer
+
+\problem{3} (15 points.)
+\argument
  R(a) < S(a)
  P(a) ^ b=a
  P(b) > S(b)
@@ -44,7 +62,7 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
         \endfitchproof
         \endanswer
 
-\problem{3} (20 points.)
+\problem{4} (10 points.)
 \argument
  B > [C > D]
  D > F
@@ -60,19 +78,17 @@ For each of the following valid arguments, complete a Fitch-style natural deduct
         \endfitchproof
         \endanswer
 
-\problem{4} (10 points.)
+\problem{5} (5 points.)
 \argument
- P(a) > Q(a)
- Q(b) ^ P(c)
 +++++++++++++
- a=c > Q(c)
+ [A ^ B] > B
 \endargument
         \answer
         \fitchproof
-         1. | P(a) > Q(a)
-         2. | Q(b) ^ P(c)  ..  Goal: a=c > Q(c)
+         1. |              ..  Goal: [A ^ B] > B
             |---
          2. | 
+         4. |
         \endfitchproof
         \endanswer
 
