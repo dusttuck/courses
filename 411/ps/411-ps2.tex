@@ -1,0 +1,173 @@
+\input 411
+\title{Phil 411 - Problem Set 2}
+
+\heading
+Problem Set 2
+Your Name
+Phil 411: Type Theory
+\endheading
+
+These are single-character \TeX\ commands to produce symbols:
+\medskip{\openup\jot\hfil\vtop{\halign{#&&\tt\hfil{\red#}\thinspace:\thinspace&$#$&#\qquad\cr
+&L&L&&P&P&&G&G&&|&|&&>&>&&*&*&&+&+&&@^@&^\cr
+}}}
+
+\Bigskip
+To produce the subscript on a $P$, use an underscore and put the whole judgment inside curly braces:
+\medskip\hfil@P_{x:A}B@\quad produces\quad$P_{x:A}B$
+
+\Bigskip
+To produce the subscript on a $L$, the curly braces are optional:
+\medskip\hfil@L_xA@\quad and\quad@L_{x}A@\quad both produce\quad$L_xA$
+
+\Biggskip
+For problems 1--12, answer with something the given rule licenses you to infer from the given statement(s). As a reminder, these are the rules:
+
+\bigskip{\openup\jot\halign{\blackmath\hfil#&\quad#\hfil\cr
+(axioms)&If $A:B$ is an axiom, infer $ |A:B$.\cr
+(variable introduction)&From $G|A:Z$, if $x$ does not occur free in $G$, infer $G,x:A|x:A$ .\cr
+(statement weakening)&From $G|A:B$ and $G|C:Z$, if $x$ does not occur free in $G$, infer $G,x:C|A:B$.\cr
+($P$-formation)&From $G,x:A|B:C$, infer $G|P_{x:A}B:C$.\cr
+($P$-introduction)&From $G,x:A|B:C$, infer $G|L_xB:P_{x:A}C$.\cr
+($P$-elimination)&From $G|C:P_{x:A}B$ and $G|D:A$, infer $G|CD:B[D/x]$.\cr
+($ b$-conversion)&From $G|A:B$ and $G|C:Z$, if $B\zz>_bC$ or $C\zz>_bB$, infer $G|A:C$.\cr
+}}
+
+
+\problems
+\problem{Examples}
+$ v:* | v:* $
+variable introduction
+        \answer
+        $ v:* , v':v | v':v $
+        \endanswer
+
+\problem{\gobble}
+$ | *:+ $ and $ | +:^ $
+statement weakening
+        \answer
+        $ v:* | *:+ $  \OR  $ v:* | +:^ $  \OR  $ v:+ | *:+ $  \OR  $ v:+ | +:^ $
+        \endanswer
+
+\problem{\gobble}
+$ v:* , v':v | +:^ $
+$\z P$-formation
+        \answer
+        $ v:* | P_{v':v}+:^ $
+        \endanswer
+
+\problem{1}
+$ | *:+ $
+variable introduction
+        \answer
+        $  $
+        \endanswer
+
+\problem{2}
+$ | P_{v:*}v:* $
+variable introduction
+        \answer
+        $  $
+        \endanswer
+
+\problem{3}
+$ v:* | v:* $ and $ v:* | +:^ $
+statement weakening
+        \answer
+        $  $
+        \endanswer
+
+\problem{4}
+$ v:+ | v>*:+ $ and $ v:+ | (v>*)>v:+ $
+statement weakening
+        \answer
+        $  $
+        \endanswer
+
+\problem{5}
+$ v:+ , v':v | *:+ $
+$\z P$-formation
+        \answer
+        $  $
+        \endanswer
+
+\problem{6}
+$ v:+ , v':+>* | v'v:* $
+$\z P$-formation
+        \answer
+        $  $
+        \endanswer
+
+\problem{7}
+$ v:+ , v':v | *:+ $
+$\z P$-introduction
+        \answer
+        $  $
+        \endanswer
+
+\problem{8}
+$ v:+ , v':+>* | v'v:* $
+$\z P$-introduction
+        \answer
+        $  $
+        \endanswer
+
+\problem{9}
+$ | A:P_{v:*}+ $ and $ | B:* $
+$\z P$-elimination
+        \answer
+        $  $
+        \endanswer
+
+\problem{10}
+$ | A:P_{v:*}Cv $ and $ | B:* $
+$\z P$-elimination
+        \answer
+        $  $
+        \endanswer
+
+\problem{11}
+$ | A:(L_vvB)C $ and $ | CB:* $
+$ b$-conversion
+        \answer
+        $  $
+        \endanswer
+
+\problem{12}
+$ | A:(L_v*)C $ and $ | *:+ $
+$ b$-conversion
+        \answer
+        $  $
+        \endanswer
+
+\endproblems
+
+For problems 13 and 14, determine the type that $B$ has to have.
+
+\problems
+\problem{Examples}
+$ v:A | Bv:* $
+        \answer
+        $ v:A | B:A>* $  \OR  $ v:A | B:P_{v':A}* $
+        \endanswer
+
+\problem{\gobble}
+$ | A:C $ and $ | BA:A>* $
+        \answer
+        $ | B:P_{v:C}v>* $
+        \endanswer
+
+\problem{13}
+$ v:* | Bv:+ $
+	\answer
+	$ v:* | B: $
+	\endanswer
+
+\problem{14}
+$ | A:C $ and $ | BA:(A>*)>A $
+	\answer
+	$ | B: $
+	\endanswer
+
+\endproblems
+\bye
