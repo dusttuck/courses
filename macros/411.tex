@@ -1,4 +1,6 @@
 \input eplain % This is included for verbatim, hyperlinks, and packages.
+\input amssym.def % rather than amssym.tex, because we only need one symbol:
+\newsymbol\square 1003
 \beginpackages
 \usepackage{color}
 \endpackages
@@ -11,7 +13,7 @@
 %  Make @text@ be \verbatim text|endverbatim.
 \def\at{@}
 \catcode`\@=\active
-\def@{\bgroup%
+\def@{\bgroup\red%
 	\ifx\resetasterisk\undefined \else\resetasterisk \fi%
 	\catcode`\^=\active%
 	\def@{\endverbatim\egroup}%
@@ -54,8 +56,12 @@
 \mathcode`\!="023F%  \bot
 \catcode`\-=12%
 \mathcode`\-="023A%  \lnot
-\catcode`\?=12
-\mathcode`\?="020F%  \bullet, but \mathord
+\catcode`\+=12%
+\mathcode`\+="0\the\msafam03%  amssym.def \square; only works if msafam is 0-9, otherwise need to translate to hex first
+\catcode`\^=12%
+\mathcode`\^="0234%  \triangle
+%\catcode`\?=12%
+%\mathcode`\?="020F%  \bullet, but \mathord
 \mathcode`\U="7255%  change family to 2
 \mathcode`\P="7005%  \Pi
 \mathcode`\L="0115%  \lambda
@@ -74,16 +80,16 @@
 % ------
 
 \definecolor{red}{RGB}{255,77,92}
-\definecolor{hlred}{RGB}{255,165,173}
+\definecolor{lightred}{RGB}{255,165,173}
 \definecolor{darkred}{RGB}{200,49,62}
 \definecolor{green}{RGB}{146,208,80}
-\definecolor{hlgreen}{RGB}{200,231,167}
+\definecolor{lightgreen}{RGB}{200,231,167}
 \definecolor{darkgreen}{RGB}{114,180,52}
 \definecolor{blue}{RGB}{0,176,240}
-\definecolor{hlblue}{RGB}{127,215,247}
+\definecolor{lightblue}{RGB}{127,215,247}
 \definecolor{darkblue}{RGB}{0,114,188}
 \definecolor{gray}{RGB}{210,210,210}
-\definecolor{hlgray}{RGB}{245,245,245}
+\definecolor{lightgray}{RGB}{245,245,245}
 \definecolor{darkgray}{RGB}{160,160,160}
 
 
@@ -91,14 +97,16 @@
 % Math colors
 % -----------
 
-\def\red{\color{red}}
-\def\green{\color{green}}
-\def\blue{\color{blue}}
+\def\makecolorcs#1#2{\def#1{\let\curcolor#1\color{#2}}}
+
+\makecolorcs\red{red}
+\makecolorcs\green{green}
+\makecolorcs\blue{blue}
 \let\mlue\blue
-\def\black{\color{black}}
+\makecolorcs\black{black}
 \let\mlack\black
-\def\gray{\color{gray}}
-\def\darkgray{\color{darkgray}}
+\makecolorcs\gray{gray}
+\makecolorcs\darkgray{darkgray}
 
 %  This is a lazy hack and only works for a single prime following the variable
 \def\makecolor#1#2#3{\bgroup#1#2%
@@ -110,14 +118,32 @@
 
 \let\starcolor\green
 \let\mathcolor\blue
+\let\typecolor\green
 \let\slashcolor\darkgray
+
+\def\zz#1#2#3{\black#1#2#3\mathcolor}
+\let\z\black
+
+\def\blackmath{%
+\let\starcolor\black%
+\let\mathcolor\black%
+\let\typecolor\black%
+\let\slashcolor\black%
+}
+
+\def\sscript#1{\let\savecolor\typecolor\let\typecolor\curcolor_{#1}\let\typecolor\savecolor}
+\catcode`\_=\active
+\let_=\sscript
 
 \begingroup
 \catcode`\b=\active
 \catcode`\[=\active
 \catcode`\]=\active
 \catcode`\/=\active
-\catcode`\*=\active
+\catcode`\|=\active
+\catcode`\:=\active
+\catcode`\,=\active
+%\catcode`\*=\active
 \gdef\mathcolors{%
 	\mathcolor%
 	\catcode`\b=\active%
@@ -125,11 +151,17 @@
 	\catcode`\[=\active%
 	\catcode`\]=\active%
 	\catcode`\/=\active%
-	\catcode`\*=\active%
+	\catcode`\|=\active%
+	\catcode`\:=\active%
+	\catcode`\,=\active%
+	%\catcode`\*=\active%
 	\def[{{\slashcolor\mathchar"405B}}%
 	\def]{{\slashcolor\mathchar"505D}}%
 	\def/{{\slashcolor\mathchar"013D}}%
-	\def*{\makecolor{\starcolor}}%
+	\def|{\slashcolor\mathchar"3260\mathcolor}% \vdash
+	\def:{\typecolor\mathchar"303A }% colon
+	\def,{\slashcolor\mathchar"313B\mathcolor}% comma as relation
+	%\def*{\makecolor{\starcolor}}%
 }
 \endgroup
 
@@ -222,15 +254,15 @@
 \setproblemindent{00}
 
 \def\problems{\nobreak\par\bgroup%
-	\let\mathcolor\black%
-	\let\slashcolor\blue%
+	%\let\mathcolor\black%
+	%\let\slashcolor\blue%
 	\advance\leftskip by\problemindent%
-	\def\Hint{\qquad{\bf Hint: }}
-	\def\points##1{\hskip1.5em(##1\ points)}
+	\def\Hint{\qquad{\bf Hint: }}%
+	\def\points##1{\hskip1.5em(##1\ points)}%
 }
 \def\endproblems{\egroup\Biggskip}
 
-\def\problem#1{\biggskip\noindent\llap{\problemprint{#1}}\ignorespaces}
+\def\problem#1{\biggskip\noindent\llap{\problemprint{#1}}\ignorespaces\obeylines\gobble}
 
 
 % -------
@@ -243,8 +275,7 @@
 
 \def\answercore{\par\nobreak\bigskip\bgroup
 	\parindent=0pt
-	\def\OR{\hskip2\answerindent{\tensc or}\hskip2\answerindent}
-	\def\ORs{\hskip1.25\answerindent{\tensc or}\hskip1.25\answerindent}
+	\def\OR{\hskip1\answerindent{\tensc or}\hskip1\answerindent}
 	\advance\leftskip by\answerindent
 	\obeylines
 }
