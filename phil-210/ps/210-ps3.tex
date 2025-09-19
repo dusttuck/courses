@@ -84,7 +84,7 @@ Construct truth tables for the following arguments. For each one, state whether 
         \endanswer
 \endproblems
 
-For each of the following argument,
+For each of the following arguments,
 \list
 a: Construct a truth table to determine whether it's valid or invalid given only the connectives. State your decision.
 
@@ -104,23 +104,38 @@ c: State whether the argument is valid or invalid, given both the connectives an
         \answerlist
         a:
         \truthtable
-         Tra | Trk | Tak : Tra. v .Trk | -.[.Tak. ^ .Tr.] | Trk. v .Tak
+         Tra | Trk | Tak : Tra. v .Trk | -.[.Tak. ^ .Trk.] | Trk. v .Tak
         +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-             |     |     :    .   .    |  .[.   .   .  .] |    .   .   
+          T  |  T  |  T  :  T .*T . T  |*F.[. t . T . t .] |  T .*T . T
+          T  |  T  |  F  :  T .*T . T  |*T.[. f . F . t .] |  T .*T . F
+          T  |  F  |  T  :  T .*T . F  |*T.[. t . F . f .] |  F .*T . T
+          T  |  F  |  F  :  T .*T . F  |*T.[. f . F . f .] |  F .*F . F
+          F  |  T  |  T  :  F .*T . T  |*F.[. t . T . t .] |  T .*T . T
+          F  |  T  |  F  :  F .*T . T  |*T.[. f . F . t .] |  T .*T . F
+          F  |  F  |  T  :  F .*F . F  |*T.[. t . F . f .] |  F .*T . T
+          F  |  F  |  F  :  F .*F . F  |*T.[. f . F . f .] |  F .*F . F
         \endtruthtable
-        Valid/Invalid?, given only the connectives.
+        Valid, given only the connectives.
 
-        b: It's valid.\OR No countermodel is possible.\OR
-        \heightmodel
-        
-        \endheightmodel
+         b:
+         \heightmodel
+          Alonzo < Ruth = Kurt
+         \endheightmodel
+         \OR
+         \heightmodel
+           Alonzo < Ruth < Kurt
+         \endheightmodel
 
-        c: Valid/Invalid?, given the connectives and predicates.
-        \endanswerlist
+:        (You only need to give one countermodel, but I've given two for illustration.)
 
-\problem{6}
+         c: Invalid, given the connectives and predicates.
+
+:        (You don't need to say why, but it's because the height model depicts a situation in which $Tra$ is T, $Trk$ is F, and $Tak$ is F, and we know from the truth table that this makes both premises T and the conclusion F.)
+                                                                                   \endanswerlist
+
+\problem{4}
 \argument
- Shorter(ruth,kurt) v Taller(ruth,alonzo)
+ Taller(ruth,alonzo) v -Taller(ruth,kurt)
  -[Taller(alonzo,kurt) ^ Taller(ruth,alonzo)]
 ++++++++++++++++++++++++++++++++++++++++++++++
  -Taller(alonzo,kurt)
@@ -128,9 +143,9 @@ c: State whether the argument is valid or invalid, given both the connectives an
         \answerlist
         a:
         \truthtable
-         S(r,k). v .T(r,a) | -.[.T(a,k). ^ .T(r,a).] | -.T(a,k)
-        ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-               .   .       |  . .      .   .      .  |  .
+         Tra | Trk | Tak : Tra. v .-.Trk | -.[.Tak. ^ .Tra.] | -.Tak
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+             |     |     :    .   . .    |  .[.   .   .   .] |  .  
         \endtruthtable
         Valid/Invalid?, given only the connectives.
 
@@ -142,7 +157,7 @@ c: State whether the argument is valid or invalid, given both the connectives an
         c: Valid/Invalid?, given the connectives and predicates.
         \endanswerlist
 
-\problem{7}
+\problem{5}
 \argument
  Taller(ruth,alonzo) ^ Taller(alonzo,kurt)
  -Taller(ruth,alonzo) v Taller(alonzo,kurt)
@@ -152,9 +167,9 @@ c: State whether the argument is valid or invalid, given both the connectives an
         \answerlist
         a:
         \truthtable
-         T(r,a). ^ .T(a,k) | -.T(r,a). v .T(a,k) | T(r,k). v .-.T(a,k)
+         Tra | Tak | Trk : Tra. ^ .Tak | -.Tra. v .Tak | Trk. v .-.Tak
         +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-               .   .       |  .      .   .       |       .   . .
+             |     |     :    .   .    |  .   .   .    |    .   . .  
         \endtruthtable
         Valid/Invalid?, given the connectives.
 
