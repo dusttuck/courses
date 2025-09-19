@@ -84,69 +84,9 @@ Construct truth tables for the following arguments. For each one, state whether 
         \endanswer
 \endproblems
 
-For each of the following arguments, use an abbreviated truth table to determine whether it's valid or invalid. State your decision.
-
-\problems
-\problem{Example}
-\argument
- A v -C
- -[A v B]
-++++++++++
- -[B v C]
-\endargument
-        \answer
-        \truthtable
-         A. v .-.C | -.[.A. v .B.] | -.[.B. v .C.]
-        +++++++++++++++++++++++++++++++++++++++++++
-          . T . .  | T. . .   . .  | F. . .   . .
-          .   . .  |  . . . F . .  |  . . . T . .
-          .   . .  |  . .*F.  .*F. |  . . .   . .
-         F.   . .  |  . . .   . .  |  . .F.   . .
-          .   .T.  |  . . .   . .  |  . . .   .*T.
-          .  ..T/*F|  . . .   . .  |  . . .   . .
-        \endtruthtable
-        Valid. (You don't need to say why, but it's because when we attempted to make both premises T and the conclusion F at the same time, we wound up contradicting ourselves.)
-        \endanswer
-
-\problem{4}
-\argument
- A v B
- -[C ^ B]
-++++++++++
- -C
-\endargument
-        \answer
-        \truthtable
-         A. v .B | -.[.C. ^ .B.] | -.C
-        +++++++++++++++++++++++++++++++
-          . T .  | T. . .   . .  | F.
-          .   .  |  . . .   . .  |  .
-        \endtruthtable
-        Valid/Invalid?
-        \endanswer
-
-\problem{5}
-\argument
- A ^ [B v C]
- -B ^ -[A ^ D]
-+++++++++++++++
- -[D v B] ^ C
-\endargument
-        \answer
-        \truthtable
-         A. ^ .[.B. v .C.] | -.B. ^ .-.[.A. ^ .D.] | -.[.D. v .B.]. ^ .C
-        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-          . T . . .   . .  |  . . T . . . .   . .  |  . . .   . . . F . 
-          .   . . .   . .  |  . .   . . . .   . .  |  . . .   . . .   . 
-        \endtruthtable
-        Valid/Invalid?
-        \endanswer
-
-\endproblems
-
-For each of the following arguments,
+For each of the following argument,
 \list
-a: Use an abbreviated truth table to determine whether it's valid or invalid, given only the connectives. State your decision.
+a: Construct a truth table to determine whether it's valid or invalid given only the connectives. State your decision.
 
 b: If it's invalid, attempt to build a height model that's a counterexample. If the argument is valid, or if no countermodel can be constructed, just say so.
 
@@ -157,38 +97,25 @@ c: State whether the argument is valid or invalid, given both the connectives an
 \problem{Example}
 \argument
  Taller(ruth,alonzo) v Taller(ruth,kurt)
- -[Shorter(kurt,alonzo) ^ Taller(ruth,kurt)]
+ -[Taller(alonzo,alonzo) ^ Taller(ruth,kurt)]
 +++++++++++++++++++++++++++++++++++++++++++++
- Taller(ruth,kurt) v Shorter(kurt,alonzo)
+ Taller(ruth,kurt) v Taller(alonzo,kurt)
 \endargument
         \answerlist
         a:
         \truthtable
-         T(r,a). v .T(r,k) | -.[.S(k,a). ^ .T(r,a).] | T(r,k). v .S(k,a)
+         Tra | Trk | Tak : Tra. v .Trk | -.[.Tak. ^ .Tr.] | Trk. v .Tak
         +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-               . T .       | T. .      .   .      .  |       . F .
-               .   .       |  . .      . F .      .  |   *F  .   .  *F
-               .   .   F   |  . . F    .   .      .  |       .   .
-           *T  .   .       |  . .      .   .      .  |       .   .
-               .   .       |  . .      .   .   T  .  |       .   .
+             |     |     :    .   .    |  .[.   .   .  .] |    .   .   
         \endtruthtable
-        Invalid, given only the connectives.
+        Valid/Invalid?, given only the connectives.
 
-        b:
+        b: It's valid.\OR No countermodel is possible.\OR
         \heightmodel
-         Alonzo < Ruth = Kurt
-        \endheightmodel
-        \OR
-        \heightmodel
-         Alonzo < Ruth < Kurt
+        
         \endheightmodel
 
-:        (You only need to give one countermodel, but I've given two for illustration.)
-
-        c: Invalid, given the connectives and predicates.
-
-:        (You don't need to say why, but it's because the height model depicts a situation in which $T(r,a)$ is T, $T(r,k)$ is F, and $S(k,a)$ is F, and we know from the abbreviated truth table that this makes both premises T and the conclusion F.)
-
+        c: Valid/Invalid?, given the connectives and predicates.
         \endanswerlist
 
 \problem{6}
