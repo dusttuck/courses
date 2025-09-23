@@ -7,10 +7,10 @@ Your Name
 Introduction to Formal Logic
 \endheading
 
-Use a full or abbreviated truth table (your choice) to determine whether the following arguments are valid or invalid and state your answer.
+Use a truth table to determine whether the following arguments are valid or invalid and state your answer.
 
 \problems
-\problem{1} (40 points.)
+\problem{1} (50 points.)
 \argument
  A v B
  B v -A
@@ -42,51 +42,20 @@ Use a full or abbreviated truth table (your choice) to determine whether the fol
         Valid/Invalid?
         \endanswer
 
-\endproblems
-
-Attempt to build countermodels for the following arguments to determine whether they're valid or invalid, given both the connectives predicates, then state your answer (and give the countermodel if possibe). You may again use whichever sort of truth table you want.
-
-\problems
 \problem{3} (20 points.)
 \argument
- Shorter(alonzo,ruth) v Shorter(ruth,kurt)
- -[Shorter(alonzo,kurt) ^ Shorter(ruth,kurt)]
-\argumentline
- -Shorter(alonzo,kurt)
+ [A ^ -B] v C
+ -*[C ^ [B v A]*]
+++++++++++++++++++
+ C v -A
 \endargument
         \answer
         \truthtable
-         S(a,r) | S(r,k) | S(a,k) : S(a,r). v .S(r,k) | -.[.S(a,k). ^ .S(r,k).] | -.S(a,k)
-        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                |        |        :       .   .       |  .[.      .   .      .] |  .   
+         A | B | C : [.A. ^ .B.]. v .C | -.*[.C. ^ .[.B. v .A.]*] | C. v .-.A 
+        ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+           |   |   : [. .   . .].   .  |  . [. .   .[. .   . .]]  |  .   . . 
         \endtruthtable
-
-        \heightmodel
-        
-        \endheightmodel
-        \OR
-        No countermodel is possible, so it's valid, given the connectives and predicates.
-        \endanswer
-
-\problem{4} (10 points.)
-\argument
- Shorter(ruth,kurt) v Shorter(ruth,alonzo)
- -[Shorter(alonzo,kurt) ^ Shorter(ruth,kurt)] v Shorter(ruth,alonzo)
-\argumentline
- Shorter(ruth,kurt) v -Shorter(alonzo,kurt)
-\endargument
-        \answer\truthtableinteritemspace1.5pt
-        \truthtable
-         S(r,k) | S(r,a) | S(a,k) : S(r,k). v .S(r,a) | .-.[.S(a,k). ^ .S(r,k).]. v .S(r,a) | S(r,k). v .-.S(a,k)
-        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                |        |        :       .   .       | . .[.      .   .      .].   .       |       .   . .   
-        \endtruthtable
-
-        \heightmodel
-        
-        \endheightmodel
-        \OR
-        No countermodel is possible, so it's valid, given the connectives and predicates.
+        Valid/Invalid?
         \endanswer
 
 \endproblems
